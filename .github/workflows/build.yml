@@ -23,13 +23,6 @@ jobs:
           echo "GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}"
           printenv
 
-      - uses: mshick/fast-envsubst@v1
-        env:
-          GITHUB_REPOSITORY: ${{ env.GITHUB_REPOSITORY }}
-        with:
-          in-file: README.md
-          out-file: README.md
-
       - name: takeshape build
         env:
           TS_PROJECT_ID: ${{ secrets.TS_PROJECT_ID }}
@@ -37,6 +30,13 @@ jobs:
         run: |
           test -d static || mkdir static
           npx --package @takeshape/cli -c "tsg build"
+
+      - uses: mshick/fast-envsubst@v1
+        env:
+          GITHUB_REPOSITORY: ${{ env.GITHUB_REPOSITORY }}
+        with:
+          in-file: README.md
+          out-file: README.md
 
       - name: great job!
         env:
