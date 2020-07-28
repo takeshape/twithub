@@ -1,4 +1,4 @@
-[![GitHub Followers](https://img.shields.io/github/followers/${GITHUB_REPOSITORY_OWNER}?label=Followers&style=for-the-badge)](https://github.com/${GITHUB_REPOSITORY_OWNER}?tab=followers) | [![GitHub stars](https://img.shields.io/github/stars/${GITHUB_REPOSITORY_OWNER}/${GITHUB_REPOSITORY_OWNER}?style=for-the-badge)](https://github.com/${GITHUB_REPOSITORY_OWNER}?tab=stars)
+[![GitHub Followers](https://img.shields.io/github/followers/${GITHUB_REPOSITORY_OWNER}?label=Followers&style=for-the-badge)](https://github.com/${GITHUB_REPOSITORY_OWNER}?tab=followers) [![GitHub stars](https://img.shields.io/github/stars/${GITHUB_REPOSITORY_OWNER}/${GITHUB_REPOSITORY_OWNER}?style=for-the-badge)](https://github.com/${GITHUB_REPOSITORY_OWNER}?tab=stars)
 
 ---
 
@@ -21,7 +21,5 @@
 {% if twit.image -%}![{{ twit.image.title }}]({{ twit.image | image({w: 510, fit: 'fillmax', fill: 'blur', q: 100}) }}){%- endif %}
 
 💬 [Reply](https://github.com/${GITHUB_REPOSITORY}/issues/new?body={{ twit.text | urlencode }}%0A%0A---) · 👏 [Share](https://twitter.com/intent/tweet?url={{ 'https://github.com/' | urlencode }}${GITHUB_REPOSITORY}{{ '#user-content-' + twit._id | urlencode }})
-
-<li><a href="https://twitter.com/intent/tweet?..." target="blank" rel="noopener noreferrer"><img src="twitter-icon.png" alt="Share Page on Twitter" /></a></li>
 
 {% endfor %}
