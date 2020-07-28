@@ -1,38 +1,14 @@
-[![GitHub Followers](https://img.shields.io/github/followers/takeshape?label=Followers&style=for-the-badge)](https://github.com/takeshape?tab=followers) [![GitHub stars](https://img.shields.io/github/stars/takeshape/README?style=for-the-badge)](https://github.com/takeshape?tab=stars)
+# TwitHub
+Looks like your project hasn't been initialized yet! Don't worry, this is easy.
 
----
+## Installing
 
-![](https://images.takeshape.io/5fa56f55-d64e-4e56-ae68-1daf93e7fdc3/dev/109353a0-b3e1-4d61-ad63-508eac27fbd3/yoel-peterson-1105776-unsplash.jpg?auto=compress%2Cformat&amp;h=134&amp;mask=ellipse&amp;q=100&amp;w=134)
-
-TakeShape [`Follow`](https://github.com/takeshape?tab=followers)
-
-TakeShape is for developers!
-
-🌎 Brooklyn, NY · 📠 [takeshape.io](https://takeshape.io)
-
-
-
----
-
-<a name="59c4ea1b-68f0-41ba-b00a-a625deb4c2e6"></a>
-@[takeshape](https://github.com/takeshape) · <kbd>Jul 28th</kbd>
-
-Welcome to TwitHub! Your premiere destination for twits you want to READ!
-
-![alt text](https://images.takeshape.io/5fa56f55-d64e-4e56-ae68-1daf93e7fdc3/dev/84750f63-fb7a-4789-af52-1439fab79234/marion-michele-330691-unsplash.jpg?auto=compress%2Cformat&amp;fill=blur&amp;fit=fillmax&amp;q=100&amp;w=510)
-
-💬 [Reply](https://github.com/takeshape/README/issues/new?body=Welcome%20to%20TwitHub!%20Your%20premiere%20destination%20for%20twits%20you%20want%20to%20READ!%0A%0A---) · 👏 [Share](https://twitter.com/intent/tweet?url=https://github.com/takeshape/README%23user-content-59c4ea1b-68f0-41ba-b00a-a625deb4c2e6&hashtags=TwitHub)
-
----
-
-<a name="0c798f22-f217-41a1-bb66-6585a1795c77"></a>
-@[takeshape](https://github.com/takeshape) · <kbd>Jul 28th</kbd>
-
-TwitHub is built using TakeShape and GitHub Actions.
-
-<a href="https://www.youtube.com/embed/z7_pVrIshxA" rel="noopener noreferrer" target= "_blank">
-  <img src="http://img.youtube.com/vi/z7_pVrIshxA/0.jpg" width="510" height="382"/><br />
-  <code>[----------------------- PLAY VIDEO -----------------------]</code>
-</a>
-
-💬 [Reply](https://github.com/takeshape/README/issues/new?body=TwitHub%20is%20built%20using%20TakeShape%20and%20GitHub%20Actions.%0A%0A---) · 👏 [Share](https://twitter.com/intent/tweet?url=https://github.com/takeshape/README%23user-content-0c798f22-f217-41a1-bb66-6585a1795c77&hashtags=TwitHub)
+1. Click this button! >>> <a href=//app.takeshape.io/add-to-takeshape?repo=https://github.com/takeshape/README/tree/master/.takeshape><img alt=Deploy To TakeShape src=https://images.takeshape.io/2cccc825-70be-431c-9ba0-10ab38ecd3a7/dev/8e2f7bda-0e08-4ede-a546-6df59be6a8bb/Deploy%20to%20TakeShape%402x.png?auto=format%2Ccompress width=205 height=38></a>
+2. Set up your [TakeShape](https://takeshape.io) project (free account required)
+3. In your TakeShape project named  click on the TwitHub dropdown in the upper left, then click 
+4. Create an API KEY with  permissions, save it somewhere safe.
+5. Copy the PROJECT ID from any TakeShape URL (hint, it looks like this 
+6. Go to your GitHub secrets by [clicking here](https://github.com/takeshape/README/settings/secrets) and create two secrets:
+  -  = 
+  -  = 
+7. That's it! Twit away...
