@@ -22,8 +22,8 @@
 {%- if twit.videoUrl -%}
 {%- set videoIdRegex = r/^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/(embed\/)?(.+)$/ -%}
 {%- set videoId = videoIdRegex.exec(twit.videoUrl)[4] -%}
-[![](http://img.youtube.com/vi/{{ videoId }}/0.jpg)]({{ twit.videoUrl }})
-[[^PLAY VIDEO^]]({{ twit.videoUrl }})
+[![](http://img.youtube.com/vi/{{ videoId }}/0.jpg)]({{ twit.videoUrl }})<br />
+[                 [^PLAY VIDEO^]]({{ twit.videoUrl }})
 {%- endif %}
 
 💬 [Reply](https://github.com/${GITHUB_REPOSITORY}/issues/new?body={{ twit.text | urlencode }}%0A%0A---) · 👏 [Share](https://twitter.com/intent/tweet?url=https://github.com/${GITHUB_REPOSITORY}%23user-content-{{ twit._id | urlencode }}&hashtags=TwitHub)
