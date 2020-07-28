@@ -6,7 +6,7 @@ TakeShape is for developers!
 
 🌎 Brooklyn, NY | 📠 [takeshape.io](https://takeshape.io)
 
-[![GitHub Followers](https://img.shields.io/github/followers/takeshape?label=Followers&style=for-the-badge)](https://github.com/takeshape?tab=followers) | [![GitHub Stars](https://img.shields.io/github/stars/takeshape?label=Followers&style=for-the-badge)](https://github.com/takeshape?tab=stars)
+[![GitHub Followers](https://img.shields.io/github/followers/takeshape?label=Followers&style=for-the-badge)](https://github.com/takeshape?tab=followers) | [![GitHub stars](https://img.shields.io/github/stars//takeshape//takeshape?style=for-the-badge)](https://github.com/takeshape?tab=stars)
 
 
 
