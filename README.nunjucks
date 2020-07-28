@@ -13,13 +13,15 @@
 {% for twit in twits.items %}
 
 ---
-
+<a name="{{ twit._id }}"></a>
 @[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>{{ date | date('MMM Do') }}</kbd>
 
 {{ twit.text }}
 
 {% if twit.image -%}![{{ twit.image.title }}]({{ twit.image | image({w: 510, fit: 'fillmax', fill: 'blur', q: 100}) }}){%- endif %}
 
-💬 [Reply](https://github.com/${GITHUB_REPOSITORY}/issues/new?body={{ twit.text | urlencode }}%0A%0A---)
+💬 [Reply](https://github.com/${GITHUB_REPOSITORY}/issues/new?body={{ twit.text | urlencode }}%0A%0A---) · 👏 [Share](https://twitter.com/intent/tweet?url={{ 'https://github.com/' | urlencode }}${GITHUB_REPOSITORY}{{ '#user-content-' + twit._id | urlencode }})
+
+<li><a href="https://twitter.com/intent/tweet?..." target="blank" rel="noopener noreferrer"><img src="twitter-icon.png" alt="Share Page on Twitter" /></a></li>
 
 {% endfor %}

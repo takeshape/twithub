@@ -5,13 +5,16 @@ query {
     website
     location
     image {
+      title
       path
     }
   }
   twits: getTwitList {
     items {
+      _id
       text
       image {
+        title
         path
       }
     }
