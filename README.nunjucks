@@ -8,4 +8,6 @@
 
 [Reply](https://github.com/${GITHUB_REPOSITORY}/issues/new?body={{ twit.text | urlencode }}%0A%0A---)
 
+---
+
 {% endfor %}
