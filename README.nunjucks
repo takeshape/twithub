@@ -1,18 +1,20 @@
+[![GitHub Followers](https://img.shields.io/github/followers/${GITHUB_REPOSITORY_OWNER}?label=Followers&style=for-the-badge)](https://github.com/${GITHUB_REPOSITORY_OWNER}?tab=followers) | [![GitHub stars](https://img.shields.io/github/stars/${GITHUB_REPOSITORY_OWNER}/${GITHUB_REPOSITORY_OWNER}?style=for-the-badge)](https://github.com/${GITHUB_REPOSITORY_OWNER}?tab=stars)
+
+---
+
 {% if profile.image -%}![{{ profile.image.title }}]({{ profile.image | image({w: 134, h: 134, mask: 'ellipse', q: 100}) }}){%- endif %}
 
 {% if profile.name -%}{{ profile.name }}{%- endif %} [`Follow`](https://github.com/${GITHUB_REPOSITORY_OWNER}?tab=followers)
 
 {% if profile.bio -%}{{ profile.bio }}{%- endif %}
 
-{% if profile.location -%}🌎 {{ profile.location }}{%- endif %} | {% if profile.website -%}📠 [{{ profile.website | replace( r/https?:\/\//, '') }}]({{ profile.website }}){%- endif %}
-
-[![GitHub Followers](https://img.shields.io/github/followers/${GITHUB_REPOSITORY_OWNER}?label=Followers&style=for-the-badge)](https://github.com/${GITHUB_REPOSITORY_OWNER}?tab=followers) | [![GitHub stars](https://img.shields.io/github/stars//${GITHUB_REPOSITORY_OWNER}//${GITHUB_REPOSITORY_OWNER}?style=for-the-badge)](https://github.com/${GITHUB_REPOSITORY_OWNER}?tab=stars)
+{% if profile.location -%}🌎 {{ profile.location }}{%- endif %} · {% if profile.website -%}📠 [{{ profile.website | replace( r/https?:\/\//, '') }}]({{ profile.website }}){%- endif %}
 
 {% for twit in twits.items %}
 
 ---
 
-@[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) <kbd>{{ date | date('MMM Do') }}</kbd>
+@[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>{{ date | date('MMM Do') }}</kbd>
 
 {{ twit.text }}
 
