@@ -13,7 +13,7 @@ TakeShape is for developers!
 
 
 ---
-<a name="foo"></a>
+
 @[takeshape](https://github.com/takeshape) · <kbd>Jul 28th</kbd>
 
 Welcome to TwitHub! Your premiere destination for twits you want to READ!
