@@ -13,6 +13,7 @@ query {
     items {
       _id
       text
+      videoUrl
       image {
         title
         path

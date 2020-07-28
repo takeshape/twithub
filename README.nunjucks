@@ -10,7 +10,7 @@
 
 {% if profile.location -%}🌎 {{ profile.location }}{%- endif %} · {% if profile.website -%}📠 [{{ profile.website | replace( r/https?:\/\//, '') }}]({{ profile.website }}){%- endif %}
 
-{% for twit in twits.items %}
+{% for twit in twits.items -%}
 
 ---
 <a name="{{ twit._id }}"></a>
@@ -18,8 +18,13 @@
 
 {{ twit.text }}
 
-{% if twit.image -%}![{{ twit.image.title }}]({{ twit.image | image({w: 510, fit: 'fillmax', fill: 'blur', q: 100}) }}){%- endif %}
+{% if twit.image -%}![{{ twit.image.title }}]({{ twit.image | image({w: 510, fit: 'fillmax', fill: 'blur', q: 100}) }}){%- endif -%}
+{%- if twit.videoUrl -%}
+{%- set videoIdRegex = r/^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/(embed\/)?(.+)$/ -%}
+{%- set videoId = videoIdRegex.exec(twit.videoUrl)[4] -%}
+[![](http://img.youtube.com/vi/{{ videoId }}/0.jpg)]({{ twit.videoUrl }})
+{%- endif %}
 
 💬 [Reply](https://github.com/${GITHUB_REPOSITORY}/issues/new?body={{ twit.text | urlencode }}%0A%0A---) · 👏 [Share](https://twitter.com/intent/tweet?url=https://github.com/${GITHUB_REPOSITORY}%23user-content-{{ twit._id | urlencode }}&hashtags=TwitHub)
 
-{% endfor %}
+{%- endfor %}
