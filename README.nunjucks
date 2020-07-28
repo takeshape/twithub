@@ -1,6 +1,6 @@
 {% for twit in twits.items %}
 
-@[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY}) <kbd>{{ date | date('MMM Do') }}</kbd>
+@[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) <kbd>{{ date | date('MMM Do') }}</kbd>
 
 ```
 {{ twit.text }}
