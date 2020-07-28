@@ -1,4 +1,4 @@
-[![GitHub Followers](https://img.shields.io/github/followers/${GITHUB_REPOSITORY_OWNER}?label=Followers&style=for-the-badge)](https://github.com/${GITHUB_REPOSITORY_OWNER}?tab=followers) [![GitHub stars](https://img.shields.io/github/stars/${GITHUB_REPOSITORY_OWNER}/${GITHUB_REPOSITORY_OWNER}?style=for-the-badge)](https://github.com/${GITHUB_REPOSITORY_OWNER}?tab=stars)
+[![GitHub Followers](https://img.shields.io/github/followers/${GITHUB_REPOSITORY_OWNER}?label=Followers&style=for-the-badge)](https://github.com/${GITHUB_REPOSITORY_OWNER}?tab=followers) [![GitHub stars](https://img.shields.io/github/stars/${GITHUB_REPOSITORY}?style=for-the-badge)](https://github.com/${GITHUB_REPOSITORY_OWNER}?tab=stars)
 
 ---
 
