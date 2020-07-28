@@ -1,0 +1,8 @@
+templatePath: ./
+buildPath: ./
+
+routes:
+  readme:
+    path: README.md
+    template: README.nunjucks
+    context: README.graphql

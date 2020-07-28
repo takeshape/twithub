@@ -1,0 +1,32 @@
+name: build README.md
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - env:
+          TS_PROJECT_ID: b9b1f9b0-313e-45d7-a92d-42dbbdec5dd0
+          TS_AUTH_TOKEN: bc1832612e8144c696751733572a9a0a
+        run: |
+          [[ -d static ]] || mkdir static
+          npx @takeshape/cli build
+
+      - name: great job!
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "$(git --no-pager log --format=format:'%an' -n 1)"
+          git config user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
+          git pull --ff-only && \
+          git diff --quiet --exit-code || git commit -am "great job" && \
+          git push
