@@ -9,15 +9,30 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  check-initialized:
     runs-on: ubuntu-latest
     steps:
-      - if: ${{ secrets.TS_PROJECT_ID != '' }} && ${{ secrets.TS_AUTH_TOKEN != '' }}
-        name: check it out!
+      - run: |
+          if \
+            [ "${{ secrets.TS_PROJECT_ID != '' }}" = "true" ] \
+            && [ "${{ secrets.TS_AUTH_TOKEN != '' }}" = "true" ]; \
+          then \
+            echo "TakeShape secrets are set"; \
+            echo "::set-output name=is-initialized::true"; \
+          else \
+            echo "TakeShape secrets are NOT set"; \
+            echo "::set-output name=is-initialized::false"; \
+          fi
+
+  build:
+    runs-on: ubuntu-latest
+    needs: [check-initialized]
+    if: needs.build.outputs.is-initialized == true
+    steps:
+      - name: check it out!
         uses: actions/checkout@v2
 
-      - if: ${{ secrets.TS_PROJECT_ID != '' }} && ${{ secrets.TS_AUTH_TOKEN != '' }}
-        name: twitting...
+      - name: twitting...
         env:
           TS_PROJECT_ID: ${{ secrets.TS_PROJECT_ID }}
           TS_AUTH_TOKEN: ${{ secrets.TS_AUTH_TOKEN }}
@@ -25,15 +40,13 @@ jobs:
           test -d static || mkdir static
           npx --package @takeshape/cli -c "tsg build"
 
-      - if: ${{ secrets.TS_PROJECT_ID != '' }} && ${{ secrets.TS_AUTH_TOKEN != '' }}
-        name: substing...
+      - name: substing...
         uses: mshick/fast-envsubst@v1
         with:
           in-file: README.md
           out-file: README.md
 
-      - if: ${{ secrets.TS_PROJECT_ID != '' }} && ${{ secrets.TS_AUTH_TOKEN != '' }}
-        name: great job!
+      - name: great job!
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

@@ -6,15 +6,30 @@ on:
       - master
 
 jobs:
-  setup:
+  check-initialized:
     runs-on: ubuntu-latest
     steps:
-      - if: ${{ secrets.TS_PROJECT_ID == '' || secrets.TS_AUTH_TOKEN == '' }}
-        name: checkout
+      - run: |
+          if \
+            [ "${{ secrets.TS_PROJECT_ID != '' }}" = "true" ] \
+            && [ "${{ secrets.TS_AUTH_TOKEN != '' }}" = "true" ]; \
+          then \
+            echo "TakeShape secrets are set"; \
+            echo "::set-output name=is-initialized::true"; \
+          else \
+            echo "TakeShape secrets are NOT set"; \
+            echo "::set-output name=is-initialized::false"; \
+          fi
+
+  setup:
+    runs-on: ubuntu-latest
+    needs: [check-initialized]
+    if: needs.build.outputs.is-initialized == false
+    steps:
+      - name: checkout
         uses: actions/checkout@v2
 
-      - if: ${{ secrets.TS_PROJECT_ID == '' || secrets.TS_AUTH_TOKEN == '' }}
-        name: write instruction
+      - name: write instruction
         run: |
           echo "# TwitHub" > README.md
           echo "Looks like your project hasn't been initialized yet! Don't worry, this is easy." >> README.md
@@ -32,8 +47,7 @@ jobs:
           echo "7. That's it! Twit away..." >> README.md
           echo "8. If you "
 
-      - if: ${{ secrets.TS_PROJECT_ID == '' || secrets.TS_AUTH_TOKEN == '' }}
-        name: commit it
+      - name: commit it
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
