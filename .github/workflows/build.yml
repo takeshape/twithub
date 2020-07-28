@@ -26,6 +26,8 @@ jobs:
           test -d static || mkdir static
           npx --package @takeshape/cli -c "tsg build"
 
+      - run: ls -al
+
       - name: great job!
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
