@@ -6,7 +6,7 @@ TakeShape is for developers!
 
 🌎 Brooklyn, NY | 📠 [takeshape.io](https://takeshape.io)
 
----
+
 
 @[takeshape](https://github.com/takeshape) <kbd>Jul 28th</kbd>
 
