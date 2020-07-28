@@ -1,6 +1,6 @@
 
 
-@[takeshape/README](https://github.com/takeshape/README) <kbd>Jul 28th</kbd>
+@[takeshape](https://github.com/takeshape/README) <kbd>Jul 28th</kbd>
 
 ```
 A second twit...
@@ -10,7 +10,7 @@ A second twit...
 
 
 
-@[takeshape/README](https://github.com/takeshape/README) <kbd>Jul 28th</kbd>
+@[takeshape](https://github.com/takeshape/README) <kbd>Jul 28th</kbd>
 
 ```
 Here is a twit!
