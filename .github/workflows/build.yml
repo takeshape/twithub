@@ -24,7 +24,7 @@ jobs:
           TS_AUTH_TOKEN: ${{ secrets.TS_AUTH_TOKEN }}
         run: |
           test -d static || mkdir static
-          npx @takeshape/cli build
+          npx --package @takeshape/cli -c "tsg build"
 
       - name: great job!
         env:
