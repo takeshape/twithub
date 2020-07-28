@@ -14,7 +14,7 @@ TakeShape is for developers!
 
 ---
 
-@[takeshape](https://github.com/takeshape) · <kbd>Jul 28th</kbd> · <time id="test">Jul</time>
+@[takeshape](https://github.com/takeshape) · <kbd>Jul 28th</kbd>
 
 Welcome to TwitHub! Your premiere destination for twits you want to READ!
 
