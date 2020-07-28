@@ -37,14 +37,14 @@ jobs:
           echo "" >> README.md
           echo "## Installing" >> README.md
           echo "" >> README.md
-          echo "1. Click this button! >>> <a href="//app.takeshape.io/add-to-takeshape?repo=https://github.com/${GITHUB_REPOSITORY}/tree/master/.takeshape"><img alt="Deploy To TakeShape" src="https://images.takeshape.io/2cccc825-70be-431c-9ba0-10ab38ecd3a7/dev/8e2f7bda-0e08-4ede-a546-6df59be6a8bb/Deploy%20to%20TakeShape%402x.png?auto=format%2Ccompress" width=205 height=38></a>" >> README.md
+          echo "1. Click this button! >>> <a href=\"//app.takeshape.io/add-to-takeshape?repo=https://github.com/${GITHUB_REPOSITORY}/tree/master/.takeshape\"><img alt=\"Deploy To TakeShape\" src=\"https://images.takeshape.io/2cccc825-70be-431c-9ba0-10ab38ecd3a7/dev/8e2f7bda-0e08-4ede-a546-6df59be6a8bb/Deploy%20to%20TakeShape%402x.png?auto=format%2Ccompress\" width=205 height=38></a>" >> README.md
           echo "2. Set up your [TakeShape](https://takeshape.io) project (free account required)" >> README.md
-          echo "3. In your TakeShape project named `TwitHub` click on the TwitHub dropdown in the upper left, then click `API Keys`" >> README.md
-          echo "4. Create an API KEY with `CI` permissions, save it somewhere safe." >> README.md
-          echo "5. Copy the PROJECT ID from any TakeShape URL (hint, it looks like this `b9b1f9b0-313e-45d7-a92d-42dbbdec5dd0`" >> README.md
+          echo "3. In your TakeShape project named \`TwitHub\` click on the TwitHub dropdown in the upper left, then click \`API Keys\`" >> README.md
+          echo "4. Create an API KEY with \`CI\` permissions, save it somewhere safe." >> README.md
+          echo "5. Copy the PROJECT ID from any TakeShape URL (hint, it looks like this \`b9b1f9b0-313e-45d7-a92d-42dbbdec5dd0\`" >> README.md
           echo "6. Go to your GitHub secrets by [clicking here](https://github.com/${GITHUB_REPOSITORY}/settings/secrets) and create two secrets:" >> README.md
-          echo "  - `TS_PROJECT_ID` = `<your project id>`" >> README.md
-          echo "  - `TS_AUTH_TOKEN` = `<your api key>`" >> README.md
+          echo "  - \`TS_PROJECT_ID\` = \`<your project id>\`" >> README.md
+          echo "  - \`TS_AUTH_TOKEN\` = \`<your api key>\`" >> README.md
           echo "7. That's it! Twit away..." >> README.md
 
       - name: great job!
