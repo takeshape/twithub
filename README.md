@@ -1,4 +1,4 @@
-[![GitHub Followers](https://img.shields.io/github/followers/takeshape?label=Followers&style=for-the-badge)](https://github.com/takeshape?tab=followers) | [![GitHub stars](https://img.shields.io/github/stars/takeshape/takeshape?style=for-the-badge)](https://github.com/takeshape?tab=stars)
+[![GitHub Followers](https://img.shields.io/github/followers/takeshape?label=Followers&style=for-the-badge)](https://github.com/takeshape?tab=followers) [![GitHub stars](https://img.shields.io/github/stars/takeshape/takeshape?style=for-the-badge)](https://github.com/takeshape?tab=stars)
 
 ---
 
@@ -22,8 +22,6 @@ Welcome to TwitHub! Your premiere destination for twits you want to READ!
 
 💬 [Reply](https://github.com/takeshape/README/issues/new?body=Welcome%20to%20TwitHub!%20Your%20premiere%20destination%20for%20twits%20you%20want%20to%20READ!%0A%0A---) · 👏 [Share](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Ftakeshape/README#user-content-59c4ea1b-68f0-41ba-b00a-a625deb4c2e6)
 
-<li><a href="https://twitter.com/intent/tweet?..." target="blank" rel="noopener noreferrer"><img src="twitter-icon.png" alt="Share Page on Twitter" /></a></li>
-
 
 
 ---
@@ -35,6 +33,4 @@ TwitHub is built using TakeShape and GitHub Actions.
 
 
 💬 [Reply](https://github.com/takeshape/README/issues/new?body=TwitHub%20is%20built%20using%20TakeShape%20and%20GitHub%20Actions.%0A%0A---) · 👏 [Share](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Ftakeshape/README#user-content-0c798f22-f217-41a1-bb66-6585a1795c77)
-
-<li><a href="https://twitter.com/intent/tweet?..." target="blank" rel="noopener noreferrer"><img src="twitter-icon.png" alt="Share Page on Twitter" /></a></li>
 
