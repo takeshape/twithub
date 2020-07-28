@@ -17,11 +17,11 @@ jobs:
             [ "${{ env.TS_PROJECT_ID != '' }}" = "true" ] \
             && [ "${{ env.TS_AUTH_TOKEN != '' }}" = "true" ]; \
           then \
-            echo "TakeShape secrets are set" \
-            echo "::set-output name=enable-builds::true" \
+            echo "TakeShape secrets are set"; \
+            echo "::set-output name=enable-builds::true"; \
           else \
-            echo "TakeShape secrets are NOT set" \
-            echo "::set-output name=enable-builds::false" \
+            echo "TakeShape secrets are NOT set"; \
+            echo "::set-output name=enable-builds::false"; \
           fi
 
   setup:
