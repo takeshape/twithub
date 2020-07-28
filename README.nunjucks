@@ -10,9 +10,10 @@
 
 {% if profile.location -%}🌎 {{ profile.location }}{%- endif %} · {% if profile.website -%}📠 [{{ profile.website | replace( r/https?:\/\//, '') }}]({{ profile.website }}){%- endif %}
 
-{% for twit in twits.items -%}
+{% for twit in twits.items %}
 
 ---
+
 <a name="{{ twit._id }}"></a>
 @[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>{{ date | date('MMM Do') }}</kbd>
 
