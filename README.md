@@ -30,7 +30,9 @@ Welcome to TwitHub! Your premiere destination for twits you want to READ!
 
 TwitHub is built using TakeShape and GitHub Actions.
 
-[![](http://img.youtube.com/vi/z7_pVrIshxA/0.jpg)](https://www.youtube.com/embed/z7_pVrIshxA)<br />
-[>>>>>>>>>>>>[^PLAY VIDEO^]>>>>>>>>>>>>](https://www.youtube.com/embed/z7_pVrIshxA)
+<a href="https://www.youtube.com/embed/z7_pVrIshxA" rel="noopener noreferrer" target= "_blank">
+  <img src="http://img.youtube.com/vi/z7_pVrIshxA/0.jpg" width="510" height="382"/><br />
+  <code>[----------------------- PLAY VIDEO -----------------------]</code>
+</a>
 
 💬 [Reply](https://github.com/takeshape/README/issues/new?body=TwitHub%20is%20built%20using%20TakeShape%20and%20GitHub%20Actions.%0A%0A---) · 👏 [Share](https://twitter.com/intent/tweet?url=https://github.com/takeshape/README%23user-content-0c798f22-f217-41a1-bb66-6585a1795c77&hashtags=TwitHub)
