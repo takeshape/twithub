@@ -1,9 +1,17 @@
 query {
+  profile: getProfile {
+    name
+    bio
+    website
+    location
+    image {
+      path
+    }
+  }
   twits: getTwitList {
-    total
     items {
       text
-      asset {
+      image {
         path
       }
     }
