@@ -6,20 +6,16 @@
 
 {% if profile.location -%}🌎 {{ profile.location }}{%- endif %} | {% if profile.website -%}📠 [{{ profile.website | replace( r/https?:\/\//, '') }}]({{ profile.website }}){%- endif %}
 
----
-
 {% for twit in twits.items %}
+
+---
 
 @[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) <kbd>{{ date | date('MMM Do') }}</kbd>
 
-<code>
 {{ twit.text }}
-</code>
 
 {% if twit.image -%}![]({{ twit.image | image({w: 510, fit: 'fillmax', fill: 'blur', q: 100}) }}){%- endif %}
 
 [Reply](https://github.com/${GITHUB_REPOSITORY}/issues/new?body={{ twit.text | urlencode }}%0A%0A---)
-
----
 
 {% endfor %}
