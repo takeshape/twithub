@@ -1,3 +1,11 @@
-{% for project in projects.items %}
-## {{ project.name }}
+{% for twit in twits.items %}
+
+@[${GITHUB_REPOSITORY}](https://github.com/${GITHUB_REPOSITORY}) <kbd>{{ date | date('MMM Do') }}</kbd>
+
+```
+{{ twit.text }}
+```
+
+[Reply](https://github.com/${GITHUB_REPOSITORY}/issues/new?body={{ twit.text | urlencode }}%0A%0A---)
+
 {% endfor %}

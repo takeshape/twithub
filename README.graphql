@@ -1,20 +1,10 @@
 query {
-  projects: getProjectList {
+  twits: getTwitList {
     total
     items {
-      name
-      startDate
-      endDate
-      coverImage {
+      text
+      asset {
         path
-      }
-      description: descriptionHtml
-      client {
-        name
-        url
-        logo {
-          path
-        }
       }
     }
   }
