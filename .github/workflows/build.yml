@@ -14,20 +14,20 @@ jobs:
     steps:
       - run: |
           if \
-            [ "${{ env.TS_PROJECT_ID != '' }}" = "true" ] \
+            [ "${{ secrets.TS_PROJECT_ID != '' }}" = "true" ] \
             && [ "${{ env.TS_AUTH_TOKEN != '' }}" = "true" ]; \
           then \
             echo "TakeShape secrets are set"; \
-            echo "::set-output name=enable-builds::true"; \
+            echo "::set-output name=is-initialized::true"; \
           else \
             echo "TakeShape secrets are NOT set"; \
-            echo "::set-output name=enable-builds::false"; \
+            echo "::set-output name=is-initialized::false"; \
           fi
 
   setup:
     runs-on: ubuntu-latest
     needs: [initialize]
-    if: needs.initialize.outputs.enable-builds == 'false'
+    if: needs.initialize.outputs.is-initialized == false
     steps:
       - run: |
           echo "BUILDS NOT ENABLED"
@@ -35,7 +35,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     needs: [initialize]
-    if: needs.initialize.outputs.enable-builds == 'true'
+    if: needs.initialize.outputs.is-initialized == true
     steps:
       - uses: actions/checkout@v2
 
