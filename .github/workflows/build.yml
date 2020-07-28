@@ -18,11 +18,12 @@ jobs:
         with:
           node-version: "12"
 
-      - env:
+      - name: takeshape build
+        env:
           TS_PROJECT_ID: ${{ secrets.TS_PROJECT_ID }}
           TS_AUTH_TOKEN: ${{ secrets.TS_AUTH_TOKEN }}
         run: |
-          [[ -d static ]] || mkdir static
+          test -d static || mkdir static
           npx @takeshape/cli build
 
       - name: great job!
