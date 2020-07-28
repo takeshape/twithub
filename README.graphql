@@ -5,6 +5,7 @@ query {
     website
     location
     image {
+      alt
       path
     }
   }
@@ -12,6 +13,7 @@ query {
     items {
       text
       image {
+        alt
         path
       }
     }

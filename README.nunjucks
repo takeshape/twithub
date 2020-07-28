@@ -1,4 +1,4 @@
-{% if profile.image -%}![]({{ profile.image | image({w: 134, h: 134, mask: 'ellipse', q: 100}) }}){%- endif %}
+{% if profile.image -%}![{{ profile.image.alt }}]({{ profile.image | image({w: 134, h: 134, mask: 'ellipse', q: 100}) }}){%- endif %}
 
 {% if profile.name -%}{{ profile.name }}{%- endif %} [`Follow`](https://github.com/${GITHUB_REPOSITORY_OWNER}?tab=followers)
 
@@ -14,8 +14,8 @@
 
 {{ twit.text }}
 
-{% if twit.image -%}![]({{ twit.image | image({w: 510, fit: 'fillmax', fill: 'blur', q: 100}) }}){%- endif %}
+{% if twit.image -%}![{{ twit.image.alt }}]({{ twit.image | image({w: 510, fit: 'fillmax', fill: 'blur', q: 100}) }}){%- endif %}
 
-[Reply](https://github.com/${GITHUB_REPOSITORY}/issues/new?body={{ twit.text | urlencode }}%0A%0A---)
+🙋‍♀️ [Reply](https://github.com/${GITHUB_REPOSITORY}/issues/new?body={{ twit.text | urlencode }}%0A%0A---)
 
 {% endfor %}
