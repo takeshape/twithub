@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  check:
+  checkit:
     runs-on: ubuntu-latest
     steps:
       - name: test variables
@@ -28,8 +28,8 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    needs: [check]
-    if: needs.check.outputs.is-initialized == true
+    needs: [checkit]
+    if: needs.checkit.outputs.is-initialized == true
     steps:
       - name: check it out!
         uses: actions/checkout@v2
