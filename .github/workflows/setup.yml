@@ -8,8 +8,6 @@ on:
 jobs:
   setup:
     runs-on: ubuntu-latest
-    needs: [check]
-    if: needs.check.outputs.is-initialized == false
     steps:
       - name: test variables
         run: |
