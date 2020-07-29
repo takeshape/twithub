@@ -13,7 +13,7 @@
 ---
 
 <a name="{{ item._id }}"></a>
-@[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>{{ date | date('MMM Do, YYYY') }}</kbd>
+{{ profile.name + " · " if profile.name }}@[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>{{ date | date('MMM Do, YYYY') }}</kbd>
 
 {{ loop.index + "/ " if showThread }}{{ twit.text }}
 
