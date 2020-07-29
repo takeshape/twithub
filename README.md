@@ -1,6 +1,6 @@
 ---
 
-![](https://images.takeshape.io/5fa56f55-d64e-4e56-ae68-1daf93e7fdc3/dev/109353a0-b3e1-4d61-ad63-508eac27fbd3/yoel-peterson-1105776-unsplash.jpg?auto=compress%2Cformat&amp;h=134&amp;mask=ellipse&amp;q=100&amp;w=134)
+![](https://images.takeshape.io/5fa56f55-d64e-4e56-ae68-1daf93e7fdc3/dev/109353a0-b3e1-4d61-ad63-508eac27fbd3/yoel-peterson-1105776-unsplash.jpg?auto=compress%2Cformat&h=134&mask=ellipse&q=100&w=134)
 
 TakeShape [`Follow`](https://github.com/${GITHUB_REPOSITORY_OWNER}?tab=followers)
 
@@ -8,11 +8,9 @@ TakeShape is for developers!
 
 🌎 Brooklyn, NY · 📠 [takeshape.io](https://takeshape.io)
 
-
-
 <hr /><a name="1595984065-1"></a>
 
-TakeShape · @[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>Jul 28th, 2020</kbd>
+TakeShape · @[\${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>Jul 28th, 2020</kbd>
 
 1/ Starting a Twit thread here. Blog on!
 
@@ -28,11 +26,9 @@ TakeShape · @[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITOR
   </a>
 </p>
 
-
-
 <hr /><a name="1595984065-2"></a>
 
-TakeShape · @[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>Jul 28th, 2020</kbd>
+TakeShape · @[\${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>Jul 28th, 2020</kbd>
 
 2/ Thread part _deux_.
 
@@ -52,13 +48,11 @@ TakeShape · @[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITOR
   </a>
 </p>
 
-
-
 <hr /><a name="1595984065-3"></a>
 
-TakeShape · @[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>Jul 28th, 2020</kbd>
+TakeShape · @[\${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>Jul 28th, 2020</kbd>
 
-3/ *Threezy* peezy.
+3/ _Threezy_ peezy.
 
 <p>
   <span>💬 </span>
@@ -72,11 +66,9 @@ TakeShape · @[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITOR
   </a>
 </p>
 
-
-
 <hr /><a name="1595944469-1"></a>
 
-TakeShape · @[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>Jul 28th, 2020</kbd>
+TakeShape · @[\${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>Jul 28th, 2020</kbd>
 
 Welcome to TwitHub! Your premiere destination for twits you want to READ!
 
@@ -96,14 +88,11 @@ Welcome to TwitHub! Your premiere destination for twits you want to READ!
   </a>
 </p>
 
-
-
 <hr /><a name="1595882579-1"></a>
 
-TakeShape · @[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>Jul 27th, 2020</kbd>
+TakeShape · @[\${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>Jul 27th, 2020</kbd>
 
 TwitHub is built using TakeShape and GitHub Actions.
-
 
 <p>
   <a href="https://www.youtube.com/watch?v=z7_pVrIshxA&amp;feature=emb_title" rel="noopener noreferrer" target= "_blank">
@@ -121,5 +110,3 @@ TwitHub is built using TakeShape and GitHub Actions.
     Share
   </a>
 </p>
-
-
