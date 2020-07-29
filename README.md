@@ -8,9 +8,9 @@ TakeShape is for developers!
 
 🌎 Brooklyn, NY · 📠 [takeshape.io](https://takeshape.io)
 
-<hr /><a name="1595984065-1"></a>
+<hr />
 
-TakeShape · @[takeshape](https://github.com/takeshape) · <kbd>Jul 28th, 2020</kbd>
+TakeShape · @[takeshape](https://github.com/takeshape) · <a name="1595984065-1" href="1595984065-1"><kbd>Jul 28th, 2020</kbd></a>
 
 1/ Starting a Twit thread here. Blog on!
 
