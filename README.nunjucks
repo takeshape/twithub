@@ -1,7 +1,11 @@
 {%- macro post(createdAt, twit, profile, loopIndex = 1, showThread = false) -%}
-<hr /><a name="{{ createdAt | date('X') }}-{{ loopIndex }}"></a>
+{% set id = createdAt | date('X') }} | '-' | {{ loopIndex }} %}
+<hr />
 
-{{ profile.name + " · " if profile.name }}@[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>{{ createdAt | date('MMM Do, YYYY') }}</kbd>
+<span>{{ profile.name + " · " if profile.name }}</span>
+<a href="https://github.com/${GITHUB_REPOSITORY_OWNER}" rel="noopener noreferrer">${GITHUB_REPOSITORY_OWNER}</a>
+<span> · </span>
+<a name="{{ createdAt | date('X') }}-{{ loopIndex }}" href="#{{ createdAt | date('X') }}-{{ loopIndex }}"><kbd>{{ createdAt | date('MMM Do, YYYY') }}</kbd></a>
 
 {{ loopIndex + "/ " if showThread }}{{ twit.text }}
 

@@ -1,0 +1,79 @@
+name: Setup >> README.md
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  push:
+    branches:
+      - master
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check variables
+        id: check-variables
+        run: |
+          if \
+            [ "${{ secrets.TS_PROJECT_ID != '' }}" = "true" ] \
+            && [ "${{ secrets.TS_AUTH_TOKEN != '' }}" = "true" ]; \
+          then \
+            echo "::set-output name=initialized::true"; \
+            echo "::set-output name=save-setup-workflow::${{ secrets.TS_SAVE_SETUP_WORKFLOW != '' }}"
+            echo "TakeShape secrets are set."; \
+            echo "*** This file will be deleted ***"; \
+          else \
+            echo "::set-output name=initialized::false"; \
+            echo "TakeShape secrets are NOT set!"; \
+            echo "*** Providing instructions ***"; \
+          fi
+
+      - name: checkout
+        if: steps.check-variables.outputs.initialized == 'false'
+        uses: actions/checkout@v2
+
+      - name: write instruction
+        if: steps.check-variables.outputs.initialized == 'false'
+        run: |
+          echo "
+            # TwitHub
+
+            Looks like your project hasn't been initialized yet! Don't worry, this is easy.
+
+            ## Installing
+
+            1. Deploy the TwitHub CMS schema and admin by clicking this button:<br />
+              <a href="//app.takeshape.io/add-to-takeshape?repo=https://github.com/${GITHUB_REPOSITORY}/tree/master/.takeshape"><img alt="Deploy To TakeShape" src="https://images.takeshape.io/2cccc825-70be-431c-9ba0-10ab38ecd3a7/dev/8e2f7bda-0e08-4ede-a546-6df59be6a8bb/Deploy%20to%20TakeShape%402x.png?auto=format%2Ccompress" width=205 height=38></a>
+            2. Set up your [TakeShape](https://takeshape.io) project (free account required).
+            3. In your new \`TwitHub\` TakeShape project click on the name \`TwitHub\` in the upper left, then click \`API Keys\` from the dropdown.
+            4. Create an \`<api-key>\` with \`CI\` permissions, **save it somewhere safe**.
+            5. Copy the \`<project-id>\` from any TakeShape URL (it looks like this \`b9b1f9b0-313e-45d7-a92d-42dbbdec5dd0\`)
+            6. Go to your GitHub secrets by [clicking here](https://github.com/${GITHUB_REPOSITORY}/settings/secrets) and create two secrets:
+              - \`TS_PROJECT_ID\` = \`<project-id>\`
+              - \`TS_AUTH_TOKEN\` = \`<api-key>\`
+            7. Run the \`TwitHub >> README.md\` workflow for the first time.
+              - Click the \`Run workflow\` button on [this page](https://github.com/${GITHUB_REPOSITORY}/actions?query=workflow%3A%22TwitHub+>>+README.md%22)
+              - Note: The `_setup.yml` workflow file that generated these instructions will be automatically removed by a scheduled cleanup operation.
+            8. That's it! Twit away...
+          " | sed -E 's/^[[:space:]]{10}//' > README.md
+
+      - name: remove this file if TS_ secrets have been added
+        if: steps.check-variables.outputs.initialized == 'true' && steps.check-variables.outputs.save-setup-workflow != 'true'
+        run: |
+          if [ -f ".github/workflows/_setup.yml" ]; \
+          then \
+            echo "Initial setup workflow file found, removing..."; \
+            rm ".github/workflows/_setup.yml"; \
+          fi
+
+      - name: commit changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "$(git --no-pager log --format=format:'%an' -n 1)"
+          git config user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
+          git pull --ff-only \
+          && git add -A \
+          && git diff HEAD --quiet --exit-code \
+          || git commit -am "great job!" \
+          && git push

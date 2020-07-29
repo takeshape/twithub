@@ -20,11 +20,11 @@ jobs:
             && [ "${{ secrets.TS_AUTH_TOKEN != '' }}" = "true" ]; \
           then \
             echo "::set-output name=initialized::true"; \
-            echo "TakeShape secrets are set!"; \
-            echo "*** YOU SHOULD DELETE .github/workflows/setup.yml! ***"; \
+            echo "TakeShape secrets are all set."; \
           else \
             echo "::set-output name=initialized::false"; \
-            echo "TakeShape secrets are NOT set"; \
+            echo "TakeShape secrets are NOT set!"; \
+            exit 1; \
           fi
 
       - name: check it out!
