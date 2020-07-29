@@ -18,26 +18,38 @@
 {{ loop.index + "/ " if showThread }}{{ twit.text }}
 
 {% if twit.image -%}
-<a href="{{ twit.image | image }}" alt="{{ twit.image.title }}" rel="noopener noreferrer">
-  <img src="{{ twit.image | image({w: 510, h: 288, fit: 'crop', crop: 'faces,entropy', q: 100}) }}"/>
-</a>
+<p>
+  <a href="{{ twit.image | image }}" alt="{{ twit.image.title }}" rel="noopener noreferrer">
+    <img src="{{ twit.image | image({w: 510, h: 288, fit: 'crop', crop: 'faces,entropy', q: 100}) }}"/>
+  </a>
+</p>
 {%- endif -%}
 {%- if twit.videoUrl -%}
-{%- set shortUrlRe = r/youtu\.be/ -%}
-{%- set videoId = null -%}
-{%- if shortUrlRe.test(twit.videoUrl) -%}
-  {%- set videoIdRe = r/^youtu\.be\/([^\?]+)/ -%}
-{%- else -%}
-  {%- set videoIdRe = r/v=([^&]+)/ -%}
+  {%- set shortUrlRe = r/youtu\.be/ -%}
+  {%- set videoId = null -%}
+  {%- if shortUrlRe.test(twit.videoUrl) -%}
+    {%- set videoIdRe = r/^youtu\.be\/([^\?]+)/ -%}
+  {%- else -%}
+    {%- set videoIdRe = r/v=([^&]+)/ -%}
+  {%- endif -%}
+  {%- set videoId = videoIdRe.exec(twit.videoUrl)[1] %}
+<p>
+  <a href="{{ twit.videoUrl }}" rel="noopener noreferrer" target= "_blank">
+    <img src="http://img.youtube.com/vi/{{ videoId }}/0.jpg" width="510" height="382"/><br />
+    <code>[----------------------- PLAY VIDEO -----------------------]</code>
+  </a>
+</p>
 {%- endif -%}
-{%- set videoId = videoIdRe.exec(twit.videoUrl)[1] %}
-<a href="{{ twit.videoUrl }}" rel="noopener noreferrer" target= "_blank">
-  <img src="http://img.youtube.com/vi/{{ videoId }}/0.jpg" width="510" height="382"/><br />
-  <code>[----------------------- PLAY VIDEO -----------------------]</code>
-</a>
-{%- endif -%}
-<br /><br />
-
-💬 [Reply](https://github.com/${GITHUB_REPOSITORY}/issues/new?body={{ twit.text | urlencode }}%0A%0A---) · 👏 [Share](https://twitter.com/intent/tweet?url=https://github.com/${GITHUB_REPOSITORY}%23user-content-{{ item._id | urlencode }}&hashtags=TwitHub)
+<p>
+  <span>💬 </span>
+  <a href="https://github.com/${GITHUB_REPOSITORY}/issues/new?body={{ twit.text | urlencode }}%0A%0A---" rel="noopener noreferrer">
+    Reply
+  </a>
+  <span> · <span>
+  <span>👏 </span>
+  <a href="https://twitter.com/intent/tweet?url=https://github.com/${GITHUB_REPOSITORY}%23user-content-{{ item._id | urlencode }}&hashtags=TwitHub">
+    Share
+  </a>
+</p>
 
 {%- endfor %}{% endfor %}
