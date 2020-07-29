@@ -65,8 +65,8 @@ Welcome to TwitHub! Your premiere destination for twits you want to READ!
 
 TwitHub is built using TakeShape and GitHub Actions.
 
-<a href="https://www.youtube.com/embed/z7_pVrIshxA" rel="noopener noreferrer" target= "_blank">
-  <img src="http://img.youtube.com/vi/z7_pVrIshxA/0.jpg" width="510" height="382"/><br />
+<a href="https://www.youtube.com/watch?v=z7_pVrIshxA&amp;feature=emb_title" rel="noopener noreferrer" target= "_blank">
+  <img src="http://img.youtube.com/vi/watch?v=z7_pVrIshxA&amp;feature=emb_title/0.jpg" width="510" height="382"/><br />
   <code>[----------------------- PLAY VIDEO -----------------------]</code>
 </a>
 
