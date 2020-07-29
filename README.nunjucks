@@ -13,7 +13,7 @@
 ---
 
 <a name="{{ item._id }}"></a>
-@[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>{{ date | date('MMM Do') }}</kbd>
+@[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>{{ date | date('MMM Do, YYYY') }}</kbd>
 
 {{ loop.index + "/ " if showThread }}{{ twit.text }}
 
@@ -30,7 +30,7 @@
   <code>[----------------------- PLAY VIDEO -----------------------]</code>
 </a>
 {%- endif %}
-
+<br /><br />
 💬 [Reply](https://github.com/${GITHUB_REPOSITORY}/issues/new?body={{ twit.text | urlencode }}%0A%0A---) · 👏 [Share](https://twitter.com/intent/tweet?url=https://github.com/${GITHUB_REPOSITORY}%23user-content-{{ item._id | urlencode }}&hashtags=TwitHub)
 
 {%- endfor %}{% endfor %}
