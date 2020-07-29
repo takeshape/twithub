@@ -45,7 +45,7 @@ jobs:
           echo "  - \`TS_PROJECT_ID\` = \`<your project id>\`" >> README.md
           echo "  - \`TS_AUTH_TOKEN\` = \`<your api key>\`" >> README.md
           echo "7. Run the \`twithub\` workflow for the first time." >> README.md
-          echo "  - [Click here](https://github.com/mshick/twithub-test/actions?query=workflow%3A%22TwitHub+>>+README.md%22)" >> README.md
+          echo "  - [Click here](https://github.com/${GITHUB_REPOSITORY}/actions?query=workflow%3A%22TwitHub+>>+README.md%22)" >> README.md
           echo "8. Remove the \`.github/workflows/setup.yml\` to prevent it from running unnecessarily." >> README.md
           echo "9. That's it! Twit away..." >> README.md
 
