@@ -11,6 +11,9 @@ on:
 jobs:
   checkit:
     runs-on: ubuntu-latest
+    outputs:
+      debug: ${{ steps.checkit.outputs.debug }}
+      initialized: ${{ steps.checkit.outputs.initialized }}
     steps:
       - name: test variables
         run: |
