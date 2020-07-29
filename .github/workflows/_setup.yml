@@ -75,5 +75,4 @@ jobs:
           git pull --ff-only \
           && git add -A \
           && git diff HEAD --quiet --exit-code \
-          || git commit -am "great job!" \
-          && git push
+            || (git commit -am "setup workflow run" && git push)

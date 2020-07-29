@@ -1,4 +1,7 @@
 query {
+  settings: getSettings {
+    maxTwits
+  }
   profile: getProfile {
     name
     bio

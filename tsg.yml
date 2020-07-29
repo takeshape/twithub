@@ -6,3 +6,7 @@ routes:
     path: README.md
     template: README.nunjucks
     context: README.graphql
+  # archive:
+  #   path: ARCHIVE.md
+  #   template: README.nunjucks
+  #   context: README.graphql

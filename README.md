@@ -8,9 +8,12 @@ TakeShape is for developers!
 
 🌎 Brooklyn, NY · 📠 [takeshape.io](https://takeshape.io)
 
-<hr /><a name="1595984065-1"></a>
+<hr />
 
-TakeShape · @[takeshape](https://github.com/takeshape) · <kbd>Jul 28th, 2020</kbd>
+<span>TakeShape · </span>
+<a href="https://github.com/takeshape" rel="noopener noreferrer">takeshape</a>
+<span> · </span>
+<a name="1595984065-1" href="#1595984065-1"><kbd>Jul 28th, 2020</kbd></a>
 
 1/ Starting a Twit thread here. Blog on!
 
@@ -26,9 +29,12 @@ TakeShape · @[takeshape](https://github.com/takeshape) · <kbd>Jul 28th, 2020</
   </a>
 </p>
 
-<hr /><a name="1595984065-2"></a>
+<hr />
 
-TakeShape · @[takeshape](https://github.com/takeshape) · <kbd>Jul 28th, 2020</kbd>
+<span>TakeShape · </span>
+<a href="https://github.com/takeshape" rel="noopener noreferrer">takeshape</a>
+<span> · </span>
+<a name="1595984065-2" href="#1595984065-2"><kbd>Jul 28th, 2020</kbd></a>
 
 2/ Thread part _deux_.
 
@@ -48,9 +54,12 @@ TakeShape · @[takeshape](https://github.com/takeshape) · <kbd>Jul 28th, 2020</
   </a>
 </p>
 
-<hr /><a name="1595984065-3"></a>
+<hr />
 
-TakeShape · @[takeshape](https://github.com/takeshape) · <kbd>Jul 28th, 2020</kbd>
+<span>TakeShape · </span>
+<a href="https://github.com/takeshape" rel="noopener noreferrer">takeshape</a>
+<span> · </span>
+<a name="1595984065-3" href="#1595984065-3"><kbd>Jul 28th, 2020</kbd></a>
 
 3/ *Threezy* peezy.
 
@@ -62,52 +71,6 @@ TakeShape · @[takeshape](https://github.com/takeshape) · <kbd>Jul 28th, 2020</
   <span> · <span>
   <span>👏 </span>
   <a href="https://twitter.com/intent/tweet?url=https://github.com/takeshape/README%23user-content-1595984065-3&hashtags=TwitHub">
-    Share
-  </a>
-</p>
-
-<hr /><a name="1595944469-1"></a>
-
-TakeShape · @[takeshape](https://github.com/takeshape) · <kbd>Jul 28th, 2020</kbd>
-
-Welcome to TwitHub! Your premiere destination for twits you want to READ!
-
-<p>
-  <a href="https://images.takeshape.io/5fa56f55-d64e-4e56-ae68-1daf93e7fdc3/dev/84750f63-fb7a-4789-af52-1439fab79234/marion-michele-330691-unsplash.jpg?auto=compress%2Cformat" alt="alt text" rel="noopener noreferrer">
-    <img src="https://images.takeshape.io/5fa56f55-d64e-4e56-ae68-1daf93e7fdc3/dev/84750f63-fb7a-4789-af52-1439fab79234/marion-michele-330691-unsplash.jpg?auto=compress%2Cformat&amp;crop=faces%2Centropy&amp;fit=crop&amp;h=288&amp;q=100&amp;w=510"/>
-  </a>
-</p><p>
-  <span>💬 </span>
-  <a href="https://github.com/takeshape/README/issues/new?body=Welcome%20to%20TwitHub!%20Your%20premiere%20destination%20for%20twits%20you%20want%20to%20READ!%0A%0A---" rel="noopener noreferrer">
-    Reply
-  </a>
-  <span> · <span>
-  <span>👏 </span>
-  <a href="https://twitter.com/intent/tweet?url=https://github.com/takeshape/README%23user-content-1595944469-1&hashtags=TwitHub">
-    Share
-  </a>
-</p>
-
-<hr /><a name="1595882579-1"></a>
-
-TakeShape · @[takeshape](https://github.com/takeshape) · <kbd>Jul 27th, 2020</kbd>
-
-TwitHub is built using TakeShape and GitHub Actions.
-
-
-<p>
-  <a href="https://www.youtube.com/watch?v=z7_pVrIshxA&amp;feature=emb_title" rel="noopener noreferrer" target= "_blank">
-    <img src="http://img.youtube.com/vi/z7_pVrIshxA/0.jpg" width="510" height="382"/><br />
-    <code>[----------------------- PLAY VIDEO -----------------------]</code>
-  </a>
-</p><p>
-  <span>💬 </span>
-  <a href="https://github.com/takeshape/README/issues/new?body=TwitHub%20is%20built%20using%20TakeShape%20and%20GitHub%20Actions.%0A%0A---" rel="noopener noreferrer">
-    Reply
-  </a>
-  <span> · <span>
-  <span>👏 </span>
-  <a href="https://twitter.com/intent/tweet?url=https://github.com/takeshape/README%23user-content-1595882579-1&hashtags=TwitHub">
     Share
   </a>
 </p>

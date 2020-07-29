@@ -24,7 +24,6 @@ jobs:
           else \
             echo "::set-output name=initialized::false"; \
             echo "TakeShape secrets are NOT set!"; \
-            exit 1; \
           fi
 
       - name: check it out!
@@ -40,13 +39,6 @@ jobs:
           test -d static || mkdir static
           npx --package @takeshape/cli -c "tsg build"
 
-      - name: substing...
-        if: steps.check-variables.outputs.initialized == 'true'
-        uses: mshick/fast-envsubst@v1
-        with:
-          in-file: README.md
-          out-file: README.md
-
       - name: great job!
         if: steps.check-variables.outputs.initialized == 'true'
         env:
@@ -57,5 +49,4 @@ jobs:
           git pull --ff-only \
           && git add -A \
           && git diff HEAD --quiet --exit-code \
-          || git commit -am "great job!" \
-          && git push
+            || (git commit -am "great job!" && git tag "twithub_$(date --iso-8601=seconds)" && git push)
