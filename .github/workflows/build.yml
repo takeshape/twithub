@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: test variables
         run: |
+          echo "::set-output name=debug::${{ secrets.TS_PROJECT_ID != '' }}"
+
           if \
             [ "${{ secrets.TS_PROJECT_ID != '' }}" = "true" ] \
             && [ "${{ secrets.TS_AUTH_TOKEN != '' }}" = "true" ]; \
@@ -34,6 +36,7 @@ jobs:
       - run: |
           echo "debug"
           echo "outputs: ${{ needs.checkit.outputs }}"
+          echo "outputs: ${{ needs.checkit.outputs.debug }}"
           echo "outputs: ${{ needs.checkit.outputs.initialized }}"
 
       - name: check it out!
