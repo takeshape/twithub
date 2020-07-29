@@ -8,8 +8,7 @@
 
 {% if profile.location -%}🌎 {{ profile.location }}{%- endif %} · {% if profile.website -%}📠 [{{ profile.website | replace( r/https?:\/\//, '') }}]({{ profile.website }}){%- endif %}
 
-{% for item in twits.items %}{% for twit in item.thread %}
-{%- set showThread = loop.length > 1 -%}
+{% for item in twits.items %}{% for twit in item.thread %}{% set showThread = loop.length > 1 -%}
 
 ---
 
