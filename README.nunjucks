@@ -20,7 +20,7 @@
 {% if twit.image -%}
 <a href="{{ twit.image | image }}" alt="{{ twit.image.title }}" rel="noopener noreferrer">
   <img src="{{ twit.image | image({w: 510, h: 288, fit: 'crop', crop: 'faces,entropy', q: 100}) }}"/>
-</a><br /><br />
+</a>
 {%- endif -%}
 {%- if twit.videoUrl -%}
 {%- set shortUrlRe = r/youtu\.be/ -%}
@@ -34,8 +34,9 @@
 <a href="{{ twit.videoUrl }}" rel="noopener noreferrer" target= "_blank">
   <img src="http://img.youtube.com/vi/{{ videoId }}/0.jpg" width="510" height="382"/><br />
   <code>[----------------------- PLAY VIDEO -----------------------]</code>
-</a><br /><br />
+</a>
 {%- endif -%}
+<br /><br />
 
 💬 [Reply](https://github.com/${GITHUB_REPOSITORY}/issues/new?body={{ twit.text | urlencode }}%0A%0A---) · 👏 [Share](https://twitter.com/intent/tweet?url=https://github.com/${GITHUB_REPOSITORY}%23user-content-{{ item._id | urlencode }}&hashtags=TwitHub)
 
