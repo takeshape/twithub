@@ -1,21 +1,9 @@
----
+{%- macro post(createdAt, twit, profile, loopIndex = 1, showThread = false) -%}
+<hr /><a name="{{ createdAt | date('X') }}-{{ loopIndex }}"></a>
 
-{% if profile.image -%}![{{ profile.image.title }}]({{ profile.image | image({w: 134, h: 134, mask: 'ellipse', q: 100}) }}){%- endif %}
+{{ profile.name + " · " if profile.name }}@[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>{{ createdAt | date('MMM Do, YYYY') }}</kbd>
 
-{% if profile.name -%}{{ profile.name }}{%- endif %} [`Follow`](https://github.com/${GITHUB_REPOSITORY_OWNER}?tab=followers)
-
-{% if profile.bio -%}{{ profile.bio }}{%- endif %}
-
-{% if profile.location -%}🌎 {{ profile.location }}{%- endif %} · {% if profile.website -%}📠 [{{ profile.website | replace( r/https?:\/\//, '') }}]({{ profile.website }}){%- endif %}
-
-{% for item in twits.items %}{% for twit in item.thread %}{% set showThread = loop.length > 1 %}
-
----
-
-<a name="{{ item._id }}"></a>
-{{ profile.name + " · " if profile.name }}@[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>{{ date | date('MMM Do, YYYY') }}</kbd>
-
-{{ loop.index + "/ " if showThread }}{{ twit.text }}
+{{ loopIndex + "/ " if showThread }}{{ twit.text }}
 
 {% if twit.image -%}
 <p>
@@ -47,9 +35,27 @@
   </a>
   <span> · <span>
   <span>👏 </span>
-  <a href="https://twitter.com/intent/tweet?url=https://github.com/${GITHUB_REPOSITORY}%23user-content-{{ item._id | urlencode }}&hashtags=TwitHub">
+  <a href="https://twitter.com/intent/tweet?url=https://github.com/${GITHUB_REPOSITORY}%23user-content-{{ createdAt | date('X') }}-{{ loopIndex }}&hashtags=TwitHub">
     Share
   </a>
 </p>
+{%- endmacro -%}
+---
 
-{%- endfor %}{% endfor %}
+{% if profile.image -%}![{{ profile.image.title }}]({{ profile.image | image({w: 134, h: 134, mask: 'ellipse', q: 100}) }}){%- endif %}
+
+{% if profile.name -%}{{ profile.name }}{%- endif %} [`Follow`](https://github.com/${GITHUB_REPOSITORY_OWNER}?tab=followers)
+
+{% if profile.bio -%}{{ profile.bio }}{%- endif %}
+
+{% if profile.location -%}🌎 {{ profile.location }}{%- endif %} · {% if profile.website -%}📠 [{{ profile.website | replace( r/https?:\/\//, '') }}]({{ profile.website }}){%- endif %}
+
+{% for item in twits.items %}{% set hasThread = item.thread.length > 0 -%}
+
+{{ post(item._createdAt, item, profile, 1, hasThread) }}
+
+{% if hasThread %}{% for threadItem in item.thread -%}
+
+{{ post(item._createdAt, threadItem, profile, loop.index + 1, hasThread) }}
+
+{% endfor %}{% endif %}{% endfor %}

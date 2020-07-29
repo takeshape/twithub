@@ -12,6 +12,13 @@ query {
   twits: getTwitList {
     items {
       _id
+      _createdAt
+      image {
+        path
+        title
+      }
+      text
+      videoUrl
       thread {
         image {
           path
