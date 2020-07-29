@@ -29,8 +29,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     needs: [checkit]
-    if: needs.checkit.outputs.initialized == 'true'
+    # if: needs.checkit.outputs.initialized == 'true'
     steps:
+      - run: |
+          echo "debug"
+          echo "outputs: ${{ needs.checkit.outputs }}"
+          echo "outputs: ${{ needs.checkit.outputs.initialized }}"
+
       - name: check it out!
         uses: actions/checkout@v2
 
