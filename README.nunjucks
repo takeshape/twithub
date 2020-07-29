@@ -8,7 +8,7 @@
 
 {% if profile.location -%}🌎 {{ profile.location }}{%- endif %} · {% if profile.website -%}📠 [{{ profile.website | replace( r/https?:\/\//, '') }}]({{ profile.website }}){%- endif %}
 
-{% for item in twits.items %}{% for twit in item.thread %}{% set showThread = loop.length > 1 -%}
+{% for item in twits.items %}{% for twit in item.thread %}{% set showThread = loop.length > 1 %}
 
 ---
 
@@ -17,7 +17,11 @@
 
 {{ loop.index + "/ " if showThread }}{{ twit.text }}
 
-{% if twit.image -%}![{{ twit.image.title }}]({{ twit.image | image({w: 510, h: 288, fit: 'crop', crop: 'faces,entropy', q: 100}) }}){%- endif -%}
+{% if twit.image -%}
+<a href="{{ twit.image | image }}" alt="{{ twit.image.title }}" rel="noopener noreferrer">
+  <img src="{{ twit.image | image({w: 510, h: 288, fit: 'crop', crop: 'faces,entropy', q: 100}) }}"/>
+</a>
+{%- endif -%}
 {%- if twit.videoUrl -%}
 {%- set videoIdRegex = r/^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/(embed\/)?(.+)$/ -%}
 {%- set videoId = videoIdRegex.exec(twit.videoUrl)[4] -%}
