@@ -9,7 +9,8 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     steps:
-      - name: test variables
+      - name: check variables
+        id: check-variables
         run: |
           if \
             [ "${{ secrets.TS_PROJECT_ID != '' }}" = "true" ] \
