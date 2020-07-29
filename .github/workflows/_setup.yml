@@ -14,12 +14,12 @@ jobs:
       - name: check variables
         id: check-variables
         run: |
+          echo "::set-output name=save-setup-workflow::${{ secrets.TS_SAVE_SETUP_WORKFLOW != '' }}"
           if \
             [ "${{ secrets.TS_PROJECT_ID != '' }}" = "true" ] \
             && [ "${{ secrets.TS_AUTH_TOKEN != '' }}" = "true" ]; \
           then \
             echo "::set-output name=initialized::true"; \
-            echo "::set-output name=save-setup-workflow::${{ secrets.TS_SAVE_SETUP_WORKFLOW != '' }}"
             echo "TakeShape secrets are set."; \
             echo "*** This file will be deleted ***"; \
           else \
@@ -67,6 +67,7 @@ jobs:
           fi
 
       - name: commit changes
+        if: steps.check-variables.outputs.save-setup-workflow != 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
