@@ -10,14 +10,15 @@
 
 {% if profile.location -%}🌎 {{ profile.location }}{%- endif %} · {% if profile.website -%}📠 [{{ profile.website | replace( r/https?:\/\//, '') }}]({{ profile.website }}){%- endif %}
 
-{% for twit in twits.items %}
+{% for item in twits.items %}{% for twit in item.thread %}
+{%- set showThread = loop.length > 1 -%}
 
 ---
 
 <a name="{{ twit._id }}"></a>
 @[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>{{ date | date('MMM Do') }}</kbd>
 
-{{ twit.text }}
+{{ loop.index + "/ " if showThread }}{{ twit.text }}
 
 {% if twit.image -%}![{{ twit.image.title }}]({{ twit.image | image({w: 510, fit: 'fillmax', fill: 'blur', q: 100}) }}){%- endif -%}
 {%- if twit.videoUrl -%}
@@ -31,4 +32,4 @@
 
 💬 [Reply](https://github.com/${GITHUB_REPOSITORY}/issues/new?body={{ twit.text | urlencode }}%0A%0A---) · 👏 [Share](https://twitter.com/intent/tweet?url=https://github.com/${GITHUB_REPOSITORY}%23user-content-{{ twit._id | urlencode }}&hashtags=TwitHub)
 
-{%- endfor %}
+{%- endfor %}{% endfor %}

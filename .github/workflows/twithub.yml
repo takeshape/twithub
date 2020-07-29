@@ -2,7 +2,7 @@ name: TWITHUB >> README.md
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "*/30 * * * *"
   push:
     branches:
       - master

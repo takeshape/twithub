@@ -12,11 +12,13 @@ query {
   twits: getTwitList {
     items {
       _id
-      text
-      videoUrl
-      image {
-        title
-        path
+      thread {
+        image {
+          path
+          title
+        }
+        text
+        videoUrl
       }
     }
   }
