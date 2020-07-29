@@ -23,8 +23,8 @@
 </a>
 {%- endif -%}
 {%- if twit.videoUrl -%}
-{%- set videoIdRegex = r/^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/(embed\/)?(.+)$/ -%}
-{%- set videoId = videoIdRegex.exec(twit.videoUrl)[4] -%}
+{%- set videoIdRegex = r/^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/(.+)$/ -%}
+{%- set videoId = videoIdRegex.exec(twit.videoUrl)[3] -%}
 <a href="{{ twit.videoUrl }}" rel="noopener noreferrer" target= "_blank">
   <img src="http://img.youtube.com/vi/{{ videoId }}/0.jpg" width="510" height="382"/><br />
   <code>[----------------------- PLAY VIDEO -----------------------]</code>
