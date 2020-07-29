@@ -27,16 +27,12 @@ jobs:
             echo "TakeShape secrets are NOT set"; \
           fi
 
-      - run: |
-          echo "debug"
-          echo "initialized: ${{ steps.check-variables.outputs.initialized }}"
-
       - name: check it out!
-        if: steps.check-variables.outputs.initialized == true
+        if: steps.check-variables.outputs.initialized == 'true'
         uses: actions/checkout@v2
 
       - name: twitting...
-        if: steps.check-variables.outputs.initialized == true
+        if: steps.check-variables.outputs.initialized == 'true'
         env:
           TS_PROJECT_ID: ${{ secrets.TS_PROJECT_ID }}
           TS_AUTH_TOKEN: ${{ secrets.TS_AUTH_TOKEN }}
@@ -45,14 +41,14 @@ jobs:
           npx --package @takeshape/cli -c "tsg build"
 
       - name: substing...
-        if: steps.check-variables.outputs.initialized == true
+        if: steps.check-variables.outputs.initialized == 'true'
         uses: mshick/fast-envsubst@v1
         with:
           in-file: README.md
           out-file: README.md
 
       - name: great job!
-        if: steps.check-variables.outputs.initialized == true
+        if: steps.check-variables.outputs.initialized == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
