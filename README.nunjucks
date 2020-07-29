@@ -1,5 +1,3 @@
-[![GitHub Followers](https://img.shields.io/github/followers/${GITHUB_REPOSITORY_OWNER}?label=Followers&style=for-the-badge)](https://github.com/${GITHUB_REPOSITORY_OWNER}?tab=followers) [![GitHub stars](https://img.shields.io/github/stars/${GITHUB_REPOSITORY}?style=for-the-badge)](https://github.com/${GITHUB_REPOSITORY_OWNER}?tab=stars)
-
 ---
 
 {% if profile.image -%}![{{ profile.image.title }}]({{ profile.image | image({w: 134, h: 134, mask: 'ellipse', q: 100}) }}){%- endif %}
@@ -15,12 +13,12 @@
 
 ---
 
-<a name="{{ twit._id }}"></a>
+<a name="{{ item._id }}"></a>
 @[${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>{{ date | date('MMM Do') }}</kbd>
 
 {{ loop.index + "/ " if showThread }}{{ twit.text }}
 
-{% if twit.image -%}![{{ twit.image.title }}]({{ twit.image | image({w: 510, fit: 'fillmax', fill: 'blur', q: 100}) }}){%- endif -%}
+{% if twit.image -%}![{{ twit.image.title }}]({{ twit.image | image({w: 510, h: 288, fit: 'crop', crop: 'faces,entropy', q: 100}) }}){%- endif -%}
 {%- if twit.videoUrl -%}
 {%- set videoIdRegex = r/^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/(embed\/)?(.+)$/ -%}
 {%- set videoId = videoIdRegex.exec(twit.videoUrl)[4] -%}
@@ -30,6 +28,6 @@
 </a>
 {%- endif %}
 
-💬 [Reply](https://github.com/${GITHUB_REPOSITORY}/issues/new?body={{ twit.text | urlencode }}%0A%0A---) · 👏 [Share](https://twitter.com/intent/tweet?url=https://github.com/${GITHUB_REPOSITORY}%23user-content-{{ twit._id | urlencode }}&hashtags=TwitHub)
+💬 [Reply](https://github.com/${GITHUB_REPOSITORY}/issues/new?body={{ twit.text | urlencode }}%0A%0A---) · 👏 [Share](https://twitter.com/intent/tweet?url=https://github.com/${GITHUB_REPOSITORY}%23user-content-{{ item._id | urlencode }}&hashtags=TwitHub)
 
 {%- endfor %}{% endfor %}
