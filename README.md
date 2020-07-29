@@ -1,8 +1,8 @@
 ---
 
-![](https://images.takeshape.io/5fa56f55-d64e-4e56-ae68-1daf93e7fdc3/dev/109353a0-b3e1-4d61-ad63-508eac27fbd3/yoel-peterson-1105776-unsplash.jpg?auto=compress%2Cformat&h=134&mask=ellipse&q=100&w=134)
+![](https://images.takeshape.io/5fa56f55-d64e-4e56-ae68-1daf93e7fdc3/dev/109353a0-b3e1-4d61-ad63-508eac27fbd3/yoel-peterson-1105776-unsplash.jpg?auto=compress%2Cformat&amp;h=134&amp;mask=ellipse&amp;q=100&amp;w=134)
 
-TakeShape [`Follow`](https://github.com/${GITHUB_REPOSITORY_OWNER}?tab=followers)
+TakeShape [`Follow`](https://github.com/takeshape?tab=followers)
 
 TakeShape is for developers!
 
@@ -10,25 +10,25 @@ TakeShape is for developers!
 
 <hr /><a name="1595984065-1"></a>
 
-TakeShape · @[\${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>Jul 28th, 2020</kbd>
+TakeShape · @[takeshape](https://github.com/takeshape) · <kbd>Jul 28th, 2020</kbd>
 
 1/ Starting a Twit thread here. Blog on!
 
 <p>
   <span>💬 </span>
-  <a href="https://github.com/${GITHUB_REPOSITORY}/issues/new?body=Starting%20a%20Twit%20thread%20here.%20Blog%20on!%0A%0A---" rel="noopener noreferrer">
+  <a href="https://github.com/takeshape/README/issues/new?body=Starting%20a%20Twit%20thread%20here.%20Blog%20on!%0A%0A---" rel="noopener noreferrer">
     Reply
   </a>
   <span> · <span>
   <span>👏 </span>
-  <a href="https://twitter.com/intent/tweet?url=https://github.com/${GITHUB_REPOSITORY}%23user-content-1595984065-1&hashtags=TwitHub">
+  <a href="https://twitter.com/intent/tweet?url=https://github.com/takeshape/README%23user-content-1595984065-1&hashtags=TwitHub">
     Share
   </a>
 </p>
 
 <hr /><a name="1595984065-2"></a>
 
-TakeShape · @[\${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>Jul 28th, 2020</kbd>
+TakeShape · @[takeshape](https://github.com/takeshape) · <kbd>Jul 28th, 2020</kbd>
 
 2/ Thread part _deux_.
 
@@ -38,37 +38,37 @@ TakeShape · @[\${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITO
   </a>
 </p><p>
   <span>💬 </span>
-  <a href="https://github.com/${GITHUB_REPOSITORY}/issues/new?body=Thread%20part%20_deux_.%0A%0A---" rel="noopener noreferrer">
+  <a href="https://github.com/takeshape/README/issues/new?body=Thread%20part%20_deux_.%0A%0A---" rel="noopener noreferrer">
     Reply
   </a>
   <span> · <span>
   <span>👏 </span>
-  <a href="https://twitter.com/intent/tweet?url=https://github.com/${GITHUB_REPOSITORY}%23user-content-1595984065-2&hashtags=TwitHub">
+  <a href="https://twitter.com/intent/tweet?url=https://github.com/takeshape/README%23user-content-1595984065-2&hashtags=TwitHub">
     Share
   </a>
 </p>
 
 <hr /><a name="1595984065-3"></a>
 
-TakeShape · @[\${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>Jul 28th, 2020</kbd>
+TakeShape · @[takeshape](https://github.com/takeshape) · <kbd>Jul 28th, 2020</kbd>
 
-3/ _Threezy_ peezy.
+3/ *Threezy* peezy.
 
 <p>
   <span>💬 </span>
-  <a href="https://github.com/${GITHUB_REPOSITORY}/issues/new?body=*Threezy*%20peezy.%0A%0A---" rel="noopener noreferrer">
+  <a href="https://github.com/takeshape/README/issues/new?body=*Threezy*%20peezy.%0A%0A---" rel="noopener noreferrer">
     Reply
   </a>
   <span> · <span>
   <span>👏 </span>
-  <a href="https://twitter.com/intent/tweet?url=https://github.com/${GITHUB_REPOSITORY}%23user-content-1595984065-3&hashtags=TwitHub">
+  <a href="https://twitter.com/intent/tweet?url=https://github.com/takeshape/README%23user-content-1595984065-3&hashtags=TwitHub">
     Share
   </a>
 </p>
 
 <hr /><a name="1595944469-1"></a>
 
-TakeShape · @[\${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>Jul 28th, 2020</kbd>
+TakeShape · @[takeshape](https://github.com/takeshape) · <kbd>Jul 28th, 2020</kbd>
 
 Welcome to TwitHub! Your premiere destination for twits you want to READ!
 
@@ -78,21 +78,22 @@ Welcome to TwitHub! Your premiere destination for twits you want to READ!
   </a>
 </p><p>
   <span>💬 </span>
-  <a href="https://github.com/${GITHUB_REPOSITORY}/issues/new?body=Welcome%20to%20TwitHub!%20Your%20premiere%20destination%20for%20twits%20you%20want%20to%20READ!%0A%0A---" rel="noopener noreferrer">
+  <a href="https://github.com/takeshape/README/issues/new?body=Welcome%20to%20TwitHub!%20Your%20premiere%20destination%20for%20twits%20you%20want%20to%20READ!%0A%0A---" rel="noopener noreferrer">
     Reply
   </a>
   <span> · <span>
   <span>👏 </span>
-  <a href="https://twitter.com/intent/tweet?url=https://github.com/${GITHUB_REPOSITORY}%23user-content-1595944469-1&hashtags=TwitHub">
+  <a href="https://twitter.com/intent/tweet?url=https://github.com/takeshape/README%23user-content-1595944469-1&hashtags=TwitHub">
     Share
   </a>
 </p>
 
 <hr /><a name="1595882579-1"></a>
 
-TakeShape · @[\${GITHUB_REPOSITORY_OWNER}](https://github.com/${GITHUB_REPOSITORY_OWNER}) · <kbd>Jul 27th, 2020</kbd>
+TakeShape · @[takeshape](https://github.com/takeshape) · <kbd>Jul 27th, 2020</kbd>
 
 TwitHub is built using TakeShape and GitHub Actions.
+
 
 <p>
   <a href="https://www.youtube.com/watch?v=z7_pVrIshxA&amp;feature=emb_title" rel="noopener noreferrer" target= "_blank">
@@ -101,12 +102,14 @@ TwitHub is built using TakeShape and GitHub Actions.
   </a>
 </p><p>
   <span>💬 </span>
-  <a href="https://github.com/${GITHUB_REPOSITORY}/issues/new?body=TwitHub%20is%20built%20using%20TakeShape%20and%20GitHub%20Actions.%0A%0A---" rel="noopener noreferrer">
+  <a href="https://github.com/takeshape/README/issues/new?body=TwitHub%20is%20built%20using%20TakeShape%20and%20GitHub%20Actions.%0A%0A---" rel="noopener noreferrer">
     Reply
   </a>
   <span> · <span>
   <span>👏 </span>
-  <a href="https://twitter.com/intent/tweet?url=https://github.com/${GITHUB_REPOSITORY}%23user-content-1595882579-1&hashtags=TwitHub">
+  <a href="https://twitter.com/intent/tweet?url=https://github.com/takeshape/README%23user-content-1595882579-1&hashtags=TwitHub">
     Share
   </a>
 </p>
+
+
