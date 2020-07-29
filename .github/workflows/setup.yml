@@ -9,15 +9,17 @@ jobs:
   check-initialized:
     runs-on: ubuntu-latest
     steps:
-      - run: |
+      - name: test variables
+        run: |
           if \
             [ "${{ secrets.TS_PROJECT_ID != '' }}" = "true" ] \
             && [ "${{ secrets.TS_AUTH_TOKEN != '' }}" = "true" ]; \
           then \
-            echo "TakeShape secrets are set"; \
+            echo "TakeShape secrets are set! You should delete this file!"; \
+            echo "*** YOU SHOULD DELETE THIS FILE! ***"; \
             echo "::set-output name=is-initialized::true"; \
           else \
-            echo "TakeShape secrets are NOT set"; \
+            echo "TakeShape secrets are NOT set. Providing instructions."; \
             echo "::set-output name=is-initialized::false"; \
           fi
 
