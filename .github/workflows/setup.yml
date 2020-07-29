@@ -16,11 +16,11 @@ jobs:
             [ "${{ secrets.TS_PROJECT_ID != '' }}" = "true" ] \
             && [ "${{ secrets.TS_AUTH_TOKEN != '' }}" = "true" ]; \
           then \
-            echo "::set-output name=is-initialized::true"; \
+            echo "::set-output name=initialized::true"; \
             echo "TakeShape secrets are set!"; \
             echo "*** YOU SHOULD DELETE THIS FILE! ***"; \
           else \
-            echo "::set-output name=is-initialized::false"; \
+            echo "::set-output name=initialized::false"; \
             echo "TakeShape secrets are NOT set. Providing instructions."; \
           fi
 
