@@ -1,4 +1,4 @@
-name: SETUP / README.md
+name: SETUP >> README.md
 
 on:
   push:
@@ -6,8 +6,10 @@ on:
       - master
 
 jobs:
-  check:
+  setup:
     runs-on: ubuntu-latest
+    needs: [check]
+    if: needs.check.outputs.is-initialized == false
     steps:
       - name: test variables
         run: |
@@ -23,15 +25,12 @@ jobs:
             echo "TakeShape secrets are NOT set. Providing instructions."; \
           fi
 
-  setup:
-    runs-on: ubuntu-latest
-    needs: [check]
-    if: needs.check.outputs.is-initialized == false
-    steps:
       - name: checkout
+        if: steps.check-variables.outputs.initialized == 'false'
         uses: actions/checkout@v2
 
       - name: write instruction
+        if: steps.check-variables.outputs.initialized == 'false'
         run: |
           echo "# TwitHub" > README.md
           echo "Looks like your project hasn't been initialized yet! Don't worry, this is easy." >> README.md
@@ -50,6 +49,7 @@ jobs:
           echo "8. If you "
 
       - name: commit it
+        if: steps.check-variables.outputs.initialized == 'false'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
