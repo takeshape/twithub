@@ -16,7 +16,7 @@ jobs:
         id: check-variables
         run: |
           if \
-            [ "${{ secrets.TS_PROJECT_IDD != '' }}" = "true" ] \
+            [ "${{ secrets.TS_PROJECT_ID != '' }}" = "true" ] \
             && [ "${{ secrets.TS_AUTH_TOKEN != '' }}" = "true" ]; \
           then \
             echo "::set-output name=initialized::true"; \
