@@ -53,7 +53,7 @@ jobs:
             6. Run the \`TwitHub >> README.md\` workflow for the first time.<br />
               - Click the \`Run workflow\` button on [this page](https://github.com/${GITHUB_REPOSITORY}/actions?query=workflow%3A%22TwitHub+>>+README.md%22)<br />
               - Note: The `_setup.yml` workflow file that generated these instructions will be automatically removed by a scheduled cleanup operation.
-            7. That's it! Twit away...
+            7. That's it! Twit away by adding Twit content in TakeShape.
           " | sed -E 's/^[[:space:]]{10}//' > README.md
 
       - name: remove this file if TS_ secrets have been added
