@@ -1,0 +1,51 @@
+query {
+  getTwitList(sort: [{ field: "_createdAt", order: "desc" }]) {
+    total
+    items {
+      _id
+      _createdAt
+      image {
+        path
+        title
+      }
+      text
+      videoUrl
+      thread {
+        image {
+          path
+          title
+        }
+        text
+        videoUrl
+      }
+    }
+  }
+  profile: getProfile {
+    name
+    bio
+    website
+    location
+    image {
+      title
+      path
+    }
+    pinnedTwit {
+      _id
+      _createdAt
+      image {
+        path
+        title
+      }
+      text
+      thread {
+        image {
+          path
+          title
+        }
+        text
+        videoUrl
+      }
+      videoUrl
+    }
+  }
+}

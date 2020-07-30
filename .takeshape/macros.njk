@@ -1,0 +1,133 @@
+{% macro getPostId(createdAt, threadIndex) %}
+  {{- createdAt | date('X') }}-{{ threadIndex -}}
+{% endmacro %}
+
+{% macro renderTwit(twit, profile, env, createdAt, threadIndex = 1, showThread = false) -%}
+{% set id = getPostId(createdAt, threadIndex) %}
+<p>
+  {{ profile.name + " · " if profile.name }}
+  <a href="https://github.com/{{ env.GITHUB_REPOSITORY_OWNER }}" rel="noopener noreferrer">@{{ env.GITHUB_REPOSITORY_OWNER }}</a>
+  &nbsp;·&nbsp; 
+  <a name="{{ id }}" href="#{{ id }}"><kbd>{{ createdAt | date('MMM Do, YYYY') }}</kbd></a>
+</p>
+
+{{ threadIndex + "/ " if showThread }}{{ twit.text | safe }}
+
+{% if twit.image -%}
+<p>
+  <a href="{{ twit.image | image | safe }}" alt="{{ twit.image.title }}" rel="noopener noreferrer">
+    <img src="{{ twit.image | image({w: 510, 'max-h': 510, fit: 'crop', crop: 'faces,entropy', q: 100, 'corner-radius': '10,10,10,10'}) | safe }}"/>
+  </a>
+</p>
+{%- endif -%}
+{%- if twit.videoUrl -%}
+  {%- set shortUrlRe = r/youtu\.be/ -%}
+  {%- set videoId = null -%}
+  {%- if shortUrlRe.test(twit.videoUrl) -%}
+    {%- set videoIdRe = r/^youtu\.be\/([^\?]+)/ -%}
+  {%- else -%}
+    {%- set videoIdRe = r/v=([^&]+)/ -%}
+  {%- endif -%}
+  {%- set videoId = videoIdRe.exec(twit.videoUrl)[1] %}
+<p>
+  <a href="{{ twit.videoUrl }}" rel="noopener noreferrer" target= "_blank">
+    <img src="http://img.youtube.com/vi/{{ videoId }}/0.jpg" width="510" height="382"/><br />
+    <code>[----------------------- PLAY VIDEO -----------------------]</code>
+  </a>
+</p>
+{%- endif -%}
+<p>
+  💬&nbsp;
+  <a href="https://github.com/{{ env.GITHUB_REPOSITORY }}/issues/new?body={{ twit.text | striptags(true) | urlencode }}%0A%0A---" rel="noopener noreferrer">
+    Reply
+  </a>
+  &nbsp;·&nbsp;
+  👏&nbsp;
+  <a href="https://twitter.com/intent/tweet?url=https://github.com/{{ env.GITHUB_REPOSITORY }}%23{{ id }}&hashtags=TwitHub">
+    Share
+  </a>
+</p>
+{%- endmacro -%}
+
+{%- macro renderTwitWithThreads(item, profile, env, showInitialHr = true) -%}
+  {%- set hasThread = (item.thread and item.thread.length > 0) -%}
+  {%- if showInitialHr %}<hr />{% endif %}
+  {{- renderTwit(item, profile, env, item._createdAt, 1, hasThread) -}}
+  {% if hasThread %}
+    {%- for threadItem in item.thread -%}
+      <hr />
+      {{ renderTwit(threadItem, profile, env, item._createdAt, loop.index + 1, hasThread) }}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endmacro %}
+
+{% macro renderProfile(profile, env) -%}
+{% if profile.image -%}<p><a href="{{ profile.image | image | safe }}"><img src="{{ profile.image | image({w: 134, h: 134, mask: 'ellipse', q: 100}) | safe }}" title="{{ profile.image.title }}"/></a></p>{%- endif %}
+
+{{ '### ' + profile.name if profile.name }}
+
+[@{{ env.GITHUB_REPOSITORY_OWNER }}](https://github.com/{{ env.GITHUB_REPOSITORY_OWNER }})&nbsp;[`Follow`](https://github.com/{{ env.GITHUB_REPOSITORY_OWNER }}?tab=followers)
+
+{{ profile.bio if profile.bio }}
+
+{{ '🌎 ' + profile.location if profile.location }}
+{{- ' · ' if profile.location -}}
+{% if profile.website %}📠&nbsp;[{{ profile.website | replace( r/https?:\/\//, '') }}]({{ profile.website }}){% endif %}
+{{- ' · ' if profile.location and profile.website -}}
+📡&nbsp;[Feed](https://raw.githubusercontent.com/{{ env.GITHUB_REPOSITORY }}/master/README.xml)
+
+{# Pinned twit -#}
+{% if profile.pinnedTwit %}
+<hr />
+<h5>📌 Pinned Twit</h5>
+{{ renderTwitWithThreads(profile.pinnedTwit, profile, env, false) }}
+{% endif %}
+{%- endmacro -%}
+
+{% macro renderFooter() -%}
+<p>
+  <hr />
+  <small><a href="https://takeshape.io">☐◇TakeShape◇☐</a> makes <a href="https://github.com/takeshape/TwitHub">TwitHub</a></small>
+</p>
+{%- endmacro %}
+
+{% macro renderHasMore(pagination) -%}
+<hr />
+<p>
+  <a href="/README/{{ pagination.currentPage + 1 }}/">
+    [Older Twits >>> ]
+  </a>
+</p>
+{%- endmacro %}
+
+{% macro renderRss(items, profile, env) -%}
+{% set repoUrl = 'https://github.com/' + env.GITHUB_REPOSITORY %}
+<?xml version="1.0" encoding="UTF-8" ?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title>{{ profile.name if profile.name else env.GITHUB_REPOSITORY_OWNER }} TwitHub Feed</title>
+<link href="{{ repoUrl }}" />
+<updated>{{ items[0]._createdAt | date('YYYY-MM-DDTHH:mm:ssZ') }}</updated>
+<author>
+  <name>{{ profile.name if profile.name else env.GITHUB_REPOSITORY_OWNER }}</name>
+</author>
+<id>{{ repoUrl }}</id>
+{%- if profile.image %}
+<logo>{{ profile.image | image({w: 250}) | safe }}</logo>
+{%- endif %}
+{%- for item in items %}
+<entry>
+  <title>{{ item.text | md | striptags | truncate(80) }}</title>
+  <link rel="alternate" href="{{ repoUrl }}/#{{ id }}"/>
+  <id>{{ repoUrl }}/#{{ id }}</id>
+  <updated>{{ item._createdAt | date('YYYY-MM-DDTHH:mm:ssZ') }}</updated>
+  <content type="html">
+    {%- filter escape -%}
+      {{- item.text | md | safe | trim -}}
+      {%- if item.image -%}<p><img src="{{ item.image | image({ w: 560, fit: 'crop'}) | safe }}" width="560" alt="{{ item.image.title }}"/></p>{%- endif -%}
+      {%- if item.videoUrl -%}<p><iframe width="560" height="315" src="{{ item.videoUrl }}" frameborder="0" allowfullscreen></iframe></p>{%- endif -%}
+    {%- endfilter -%}
+  </content>
+</entry>
+{%- endfor %}
+</feed>
+{%- endmacro %}

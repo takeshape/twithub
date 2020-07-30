@@ -1,0 +1,37 @@
+{%- from ".takeshape/macros.njk" import renderTwitWithThreads -%}
+{%- from ".takeshape/macros.njk" import renderProfile -%}
+{%- from ".takeshape/macros.njk" import renderFooter -%}
+{%- from ".takeshape/macros.njk" import renderHasMore -%}
+{%- from ".takeshape/macros.njk" import renderRss -%}
+
+{%- if currentPath == 'README.xml' -%}
+
+{{ renderRss(getTwitList.items, profile, env) }}
+
+{% else %}
+{#- Profile heading -#}
+{%- if currentPath == 'README.md' -%}
+
+{{ renderProfile(profile, env) }}
+
+{%- else -%}
+{#- Archive heading -#}
+## {{ pagination.currentPage }}/{{ pagination.totalPages }}
+
+{%- endif -%}
+
+{# Twit section -#}
+{% for item in items -%}
+
+{{ renderTwitWithThreads(item, profile, env) }}
+
+{%- endfor %}
+
+{% if (pagination.currentPage < pagination.totalPages) and pagination.totalPages > 1 -%}
+{{ renderHasMore(pagination) }}
+{% endif -%}
+
+{%- if showFooter -%}
+{{ renderFooter() }}
+{%- endif %}
+{%- endif %}

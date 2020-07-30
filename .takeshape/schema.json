@@ -1,0 +1,193 @@
+{
+  "contentTypes": {
+    "r10oVxH9X": {
+      "single": false,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "image": {
+            "title": "Image",
+            "type": "object",
+            "relationship": { "contentTypeIds": ["ASSET"] },
+            "properties": {
+              "contentTypeId": { "type": "string", "enum": ["ASSET"] },
+              "id": { "type": "string" }
+            },
+            "key": "b-YM5Jz5O",
+            "required": ["contentTypeId", "id"]
+          },
+          "text": {
+            "title": "Text",
+            "type": "string",
+            "maxLength": 280,
+            "key": "poXKIah6M",
+            "minLength": 1
+          },
+          "thread": {
+            "minItems": 0,
+            "maxItems": 19,
+            "title": "Thread",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "videoUrl": {
+                  "pattern": "^(https?\\:\\/\\/)?(www\\.youtube\\.com|youtu\\.?be)\\/.+$",
+                  "description": "YouTube URLs only!",
+                  "title": "Video URL",
+                  "type": "string",
+                  "key": "uc76kw_K0",
+                  "minLength": 0
+                },
+                "image": {
+                  "title": "Image",
+                  "type": "object",
+                  "relationship": { "contentTypeIds": ["ASSET"] },
+                  "properties": {
+                    "contentTypeId": { "type": "string", "enum": ["ASSET"] },
+                    "id": { "type": "string" }
+                  },
+                  "key": "9mycxY1y0",
+                  "required": ["contentTypeId", "id"]
+                },
+                "text": {
+                  "title": "Text",
+                  "type": "string",
+                  "maxLength": 280,
+                  "key": "0QZtWEHxz",
+                  "minLength": 1
+                }
+              },
+              "required": ["text"]
+            },
+            "key": "I8xomAzLg"
+          },
+          "videoUrl": {
+            "pattern": "^(https?\\:\\/\\/)?(www\\.youtube\\.com|youtu\\.?be)\\/.+$",
+            "title": "Video URL",
+            "type": "string",
+            "key": "zeAThdqRU",
+            "minLength": 0
+          }
+        },
+        "required": ["text"]
+      },
+      "workflow": "default",
+      "name": "twit",
+      "description": "Work that's completed and featured in my portfolio",
+      "taxonomy": false,
+      "title": "Twit",
+      "forms": {
+        "default": {
+          "properties": {
+            "image": { "widget": "image" },
+            "text": { "widget": "markdownText" },
+            "thread": {
+              "properties": {
+                "videoUrl": { "widget": "singleLineText" },
+                "image": { "widget": "image" },
+                "text": { "widget": "markdownText" }
+              },
+              "widget": "repeater",
+              "order": ["text", "image", "videoUrl"]
+            },
+            "videoUrl": {
+              "instructions": "YouTube URLs only!",
+              "widget": "singleLineText"
+            }
+          },
+          "order": ["text", "image", "videoUrl", "thread"]
+        }
+      }
+    },
+    "S1oNHDYc7": {
+      "single": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string",
+            "maxLength": 50,
+            "key": "PqvzkI-DJ",
+            "minLength": 1
+          },
+          "bio": {
+            "title": "Bio",
+            "type": "string",
+            "maxLength": 160,
+            "key": "vcqi6tBUb",
+            "minLength": 0
+          },
+          "image": {
+            "title": "Image",
+            "type": "object",
+            "relationship": { "contentTypeIds": ["ASSET"] },
+            "properties": {
+              "contentTypeId": { "type": "string", "enum": ["ASSET"] },
+              "id": { "type": "string" }
+            },
+            "key": "Bkmyrvtcm",
+            "required": ["contentTypeId", "id"]
+          },
+          "location": {
+            "title": "Location",
+            "type": "string",
+            "maxLength": 30,
+            "key": "OhFolk5m9",
+            "minLength": 0
+          },
+          "website": {
+            "pattern": "^https?://.*",
+            "title": "Website",
+            "type": "string",
+            "maxLength": 100,
+            "key": "cg3uKD8Vf",
+            "minLength": 0
+          },
+          "pinnedTwit": {
+            "type": "object",
+            "title": "Pinned Twit",
+            "relationship": {
+              "type": "single",
+              "contentTypeIds": ["r10oVxH9X"]
+            },
+            "key": "MgZ9liItU",
+            "properties": {
+              "contentTypeId": { "type": "string", "enum": ["r10oVxH9X"] },
+              "id": { "type": "string" }
+            },
+            "required": ["contentTypeId", "id"]
+          }
+        },
+        "required": ["name"]
+      },
+      "workflow": "default",
+      "name": "profile",
+      "description": "More information about me",
+      "taxonomy": false,
+      "title": "Profile",
+      "forms": {
+        "default": {
+          "properties": {
+            "name": { "widget": "singleLineText" },
+            "bio": { "widget": "paragraphText" },
+            "image": { "widget": "image" },
+            "location": { "widget": "singleLineText" },
+            "website": { "widget": "singleLineText" },
+            "pinnedTwit": { "widget": "relationship" }
+          },
+          "order": ["name", "bio", "location", "website", "image", "pinnedTwit"]
+        }
+      }
+    }
+  },
+  "workflows": {},
+  "projectId": "b9b1f9b0-313e-45d7-a92d-42dbbdec5dd0",
+  "version": 23,
+  "updated": 1596056871837,
+  "defaultLocale": "en",
+  "locales": ["en"],
+  "created": 1538747906432,
+  "apiVersion": "2"
+}

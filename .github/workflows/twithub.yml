@@ -1,0 +1,54 @@
+name: TwitHub >> README.md
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check variables
+        id: check-variables
+        run: |
+          if \
+            [ "${{ secrets.TS_PROJECT_ID != '' }}" = "true" ] \
+            && [ "${{ secrets.TS_AUTH_TOKEN != '' }}" = "true" ]; \
+          then \
+            echo "::set-output name=initialized::true"; \
+            echo "TakeShape secrets are all set."; \
+          else \
+            echo "::set-output name=initialized::false"; \
+            echo "TakeShape secrets are NOT set!"; \
+          fi
+
+      - name: check it out!
+        if: steps.check-variables.outputs.initialized == 'true'
+        uses: actions/checkout@v2
+
+      - name: twitting...
+        if: steps.check-variables.outputs.initialized == 'true'
+        env:
+          TS_PROJECT_ID: ${{ secrets.TS_PROJECT_ID }}
+          TS_AUTH_TOKEN: ${{ secrets.TS_AUTH_TOKEN }}
+        run: |
+          test -d static || mkdir static
+          npx --package @takeshape/cli -c "tsg build"
+
+      - name: great job!
+        if: steps.check-variables.outputs.initialized == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          tag=$(date +%s)
+          tag_message=$(date '+%Y-%m-%d:%H:%M:%S:%Z')
+          git config user.name "$(git --no-pager log --format=format:'%an' -n 1)"
+          git config user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
+          git pull --ff-only \
+          && git add -A \
+          && git diff HEAD --quiet --exit-code \
+            || (git commit -am "great job!" && git tag -a "t${tag}" -m "${tag_message}" && git push --follow-tags)

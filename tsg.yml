@@ -1,0 +1,20 @@
+templatePath: ./
+buildPath: ./
+
+context:
+  showFooter: true
+
+routes:
+  readme:
+    context: README.graphql
+    paginate:
+      pageSize: 10
+      path: README/:num/README.md
+      firstPage: README.md
+      template: README.njk
+      data: README.graphql
+
+  feed:
+    path: README.xml
+    template: README.njk
+    context: README.graphql
