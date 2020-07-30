@@ -178,7 +178,7 @@ Keep reading if you want the spoilers.
   <a name="1595984065-7" href="#1595984065-7"><kbd>Jul 28th, 2020</kbd></a>
 </p>
 
-7/ <a href="//app.takeshape.io/add-to-takeshape?repo=https://github.com/takeshape/TwitHub/tree/master/.takeshape"><img src="https://images.takeshape.io/2cccc825-70be-431c-9ba0-10ab38ecd3a7/dev/8e2f7bda-0e08-4ede-a546-6df59be6a8bb/Deploy%20to%20TakeShape%402x.png" width="205"/></a>
+7/ <a href="//app.takeshape.io/add-to-takeshape?repo=https://github.com/takeshape/TwitHub/tree/master/.takeshape/pattern"><img src="https://images.takeshape.io/2cccc825-70be-431c-9ba0-10ab38ecd3a7/dev/8e2f7bda-0e08-4ede-a546-6df59be6a8bb/Deploy+to+TakeShape@2x.png" width="205"/></a>
 
 <p>
   💬&nbsp;
