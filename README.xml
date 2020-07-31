@@ -2,32 +2,32 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 <title>TakeShape TwitHub Feed</title>
-<link href="https://github.com/takeshape/TwitHub" />
+<link href="https://github.com/takeshape/twithub" />
 <updated>2020-07-28T20:54:25-04:00</updated>
 <author>
   <name>TakeShape</name>
 </author>
-<id>https://github.com/takeshape/TwitHub</id>
+<id>https://github.com/takeshape/twithub</id>
 <logo>https://images.takeshape.io/b9b1f9b0-313e-45d7-a92d-42dbbdec5dd0/dev/aa51f61d-0d03-4fa0-8d34-d8a1133356d9/takeshape_logo_lg_black-sq-500.png?auto=compress%2Cformat&w=250</logo>
 <entry>
   <title>Making creative use of GitHub Actions and TakeShape, an easy-to-use GraphQL...</title>
-  <link rel="alternate" href="https://github.com/takeshape/TwitHub/#"/>
-  <id>https://github.com/takeshape/TwitHub/#</id>
+  <link rel="alternate" href="https://github.com/takeshape/twithub/#"/>
+  <id>https://github.com/takeshape/twithub/#</id>
   <updated>2020-07-28T20:54:25-04:00</updated>
   <content type="html">&lt;p&gt;Making creative use of GitHub Actions and &lt;a href=&quot;https://takeshape.io&quot;&gt;TakeShape&lt;/a&gt;, an easy-to-use GraphQL platform and CMS, TwitHub is the perfect way to make your new GitHub profile page &lt;code&gt;l33t&lt;/code&gt; af.&lt;/p&gt;
 &lt;p&gt;Follow this thread to get up-and-running in minutes!&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;https://images.takeshape.io/b9b1f9b0-313e-45d7-a92d-42dbbdec5dd0/dev/1a5e2a22-1ec1-45c5-882a-ab0cbe0b93e7/morpheus.jpg?auto=compress%2Cformat&amp;fit=crop&amp;w=560&quot; width=&quot;560&quot; alt=&quot;&quot;/&gt;&lt;/p&gt;</content>
 </entry>
 <entry>
   <title>Welcome to TwitHub! What are you fooing?</title>
-  <link rel="alternate" href="https://github.com/takeshape/TwitHub/#"/>
-  <id>https://github.com/takeshape/TwitHub/#</id>
+  <link rel="alternate" href="https://github.com/takeshape/twithub/#"/>
+  <id>https://github.com/takeshape/twithub/#</id>
   <updated>2020-07-28T09:54:29-04:00</updated>
   <content type="html">&lt;p&gt;Welcome to TwitHub! What are you &lt;em&gt;foo&lt;/em&gt;ing?&lt;/p&gt;</content>
 </entry>
 <entry>
   <title>faq can I post astrology memes? yes.</title>
-  <link rel="alternate" href="https://github.com/takeshape/TwitHub/#"/>
-  <id>https://github.com/takeshape/TwitHub/#</id>
+  <link rel="alternate" href="https://github.com/takeshape/twithub/#"/>
+  <id>https://github.com/takeshape/twithub/#</id>
   <updated>2020-07-27T16:42:59-04:00</updated>
   <content type="html">&lt;p&gt;faq can I post astrology memes? yes.&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;https://images.takeshape.io/b9b1f9b0-313e-45d7-a92d-42dbbdec5dd0/dev/e9aa9eec-d9e6-45a7-a64e-221f1ac7a08f/aquarius.png?auto=compress%2Cformat&amp;fit=crop&amp;w=560&quot; width=&quot;560&quot; alt=&quot;&quot;/&gt;&lt;/p&gt;</content>
 </entry>
