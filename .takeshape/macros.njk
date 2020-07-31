@@ -16,7 +16,7 @@
 {% if twit.image -%}
 <p>
   <a href="{{ twit.image | image | safe }}" alt="{{ twit.image.title }}" rel="noopener noreferrer">
-    <img src="{{ twit.image | image({w: 510, 'max-h': 510, fit: 'crop', crop: 'faces,entropy', q: 100, 'corner-radius': '10,10,10,10'}) | safe }}"/>
+    <img src="{{ twit.image | image({w: 510, 'max-h': 510, fit: 'crop', crop: 'faces,entropy', q: 100, 'corner-radius': '15,15,15,15', mask: 'corners'}) | safe }}"/>
   </a>
 </p>
 {%- endif -%}
