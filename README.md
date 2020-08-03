@@ -289,15 +289,15 @@ Welcome to TwitHub! What are you *foo*ing?
   <a name="1595882579-1" href="#1595882579-1"><kbd>Jul 27th, 2020</kbd></a>
 </p>
 
-faq can I post astrology memes? yes.
+faq can I post ~~astrology~~ memes? yes.
 
 <p>
-  <a href="https://images.takeshape.io/b9b1f9b0-313e-45d7-a92d-42dbbdec5dd0/dev/e9aa9eec-d9e6-45a7-a64e-221f1ac7a08f/aquarius.png?auto=compress%2Cformat" alt="" rel="noopener noreferrer">
-    <img src="https://images.takeshape.io/b9b1f9b0-313e-45d7-a92d-42dbbdec5dd0/dev/e9aa9eec-d9e6-45a7-a64e-221f1ac7a08f/aquarius.png?auto=compress%2Cformat&corner-radius=15%2C15%2C15%2C15&crop=faces%2Centropy&fit=crop&mask=corners&max-h=510&q=100&w=510"/>
+  <a href="https://images.takeshape.io/b9b1f9b0-313e-45d7-a92d-42dbbdec5dd0/dev/35752c8e-1467-43f6-84d6-c737314001d2/4aaii2.jpg?auto=compress%2Cformat" alt="" rel="noopener noreferrer">
+    <img src="https://images.takeshape.io/b9b1f9b0-313e-45d7-a92d-42dbbdec5dd0/dev/35752c8e-1467-43f6-84d6-c737314001d2/4aaii2.jpg?auto=compress%2Cformat&corner-radius=15%2C15%2C15%2C15&crop=faces%2Centropy&fit=crop&mask=corners&max-h=510&q=100&w=510"/>
   </a>
 </p><p>
   💬&nbsp;
-  <a href="https://github.com/takeshape/twithub/issues/new?body=faq%20can%20I%20post%20astrology%20memes%3F%20yes.%0A%0A---" rel="noopener noreferrer">
+  <a href="https://github.com/takeshape/twithub/issues/new?body=faq%20can%20I%20post%20~~astrology~~%20memes%3F%20yes.%0A%0A---" rel="noopener noreferrer">
     Reply
   </a>
   &nbsp;·&nbsp;
