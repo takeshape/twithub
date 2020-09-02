@@ -2,7 +2,7 @@ name: Setup >> README.md
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "20 4 * * *"
   push:
     branches:
       - trunk
