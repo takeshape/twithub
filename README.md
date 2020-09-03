@@ -41,13 +41,11 @@ Welcome to TwitHub! What are you *foo*ing?
 </p>
 
 Longform article up on building TwitHub!  
-👇👀👇👀👇  
-[takeshape.io/articles/introducing-twithub](https://www.takeshape.io/articles/introducing-twithub/)  
-👆👀👆👀👆
+👀👉[takeshape.io/articles/introducing-twithub](https://www.takeshape.io/articles/introducing-twithub/)👈👀
 
 <p>
   💬&nbsp;
-  <a href="https://github.com/takeshape/twithub/issues/new?body=Longform%20article%20up%20on%20building%20TwitHub!%0A%F0%9F%91%87%F0%9F%91%80%F0%9F%91%87%F0%9F%91%80%F0%9F%91%87%0A%5Btakeshape.io%2Farticles%2Fintroducing-twithub%5D(https%3A%2F%2Fwww.takeshape.io%2Farticles%2Fintroducing-twithub%2F)%0A%F0%9F%91%86%F0%9F%91%80%F0%9F%91%86%F0%9F%91%80%F0%9F%91%86%0A%0A---" rel="noopener noreferrer">
+  <a href="https://github.com/takeshape/twithub/issues/new?body=Longform%20article%20up%20on%20building%20TwitHub!%0A%F0%9F%91%80%F0%9F%91%89%5Btakeshape.io%2Farticles%2Fintroducing-twithub%5D(https%3A%2F%2Fwww.takeshape.io%2Farticles%2Fintroducing-twithub%2F)%F0%9F%91%88%F0%9F%91%80%0A%0A---" rel="noopener noreferrer">
     Reply
   </a>
   &nbsp;·&nbsp;
