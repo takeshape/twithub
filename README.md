@@ -16,22 +16,19 @@ TakeShape is for developers!
   TakeShape · 
   <a href="https://github.com/takeshape" rel="noopener noreferrer">@takeshape</a>
   &nbsp;·&nbsp; 
-  <a name="1599146356-1" href="#1599146356-1"><kbd>Sep 3rd, 2020</kbd></a>
+  <a name="1595944469-1" href="#1595944469-1"><kbd>Jul 28th, 2020</kbd></a>
 </p>
 
-Longform article up on building TwitHub!  
-👇👀👇👀👇  
-[https://www.takeshape.io/articles/introducing-twithub/](https://www.takeshape.io/articles/introducing-twithub/)  
-👆👀👆👀👆
+Welcome to TwitHub! What are you *foo*ing?
 
 <p>
   💬&nbsp;
-  <a href="https://github.com/takeshape/twithub/issues/new?body=Longform%20article%20up%20on%20building%20TwitHub!%0A%F0%9F%91%87%F0%9F%91%80%F0%9F%91%87%F0%9F%91%80%F0%9F%91%87%0A%5Bhttps%3A%2F%2Fwww.takeshape.io%2Farticles%2Fintroducing-twithub%2F%5D(https%3A%2F%2Fwww.takeshape.io%2Farticles%2Fintroducing-twithub%2F)%0A%F0%9F%91%86%F0%9F%91%80%F0%9F%91%86%F0%9F%91%80%F0%9F%91%86%0A%0A---" rel="noopener noreferrer">
+  <a href="https://github.com/takeshape/twithub/issues/new?body=Welcome%20to%20TwitHub!%20What%20are%20you%20*foo*ing%3F%0A%0A---" rel="noopener noreferrer">
     Reply
   </a>
   &nbsp;·&nbsp;
   👏&nbsp;
-  <a href="https://twitter.com/intent/tweet?url=https://github.com/takeshape/twithub%231599146356-1&hashtags=TwitHub">
+  <a href="https://twitter.com/intent/tweet?url=https://github.com/takeshape/twithub%231595944469-1&hashtags=TwitHub">
     Share
   </a>
 </p>
@@ -45,12 +42,12 @@ Longform article up on building TwitHub!
 
 Longform article up on building TwitHub!  
 👇👀👇👀👇  
-[https://www.takeshape.io/articles/introducing-twithub/](https://www.takeshape.io/articles/introducing-twithub/)  
+[takeshape.io/articles/introducing-twithub](https://www.takeshape.io/articles/introducing-twithub/)  
 👆👀👆👀👆
 
 <p>
   💬&nbsp;
-  <a href="https://github.com/takeshape/twithub/issues/new?body=Longform%20article%20up%20on%20building%20TwitHub!%0A%F0%9F%91%87%F0%9F%91%80%F0%9F%91%87%F0%9F%91%80%F0%9F%91%87%0A%5Bhttps%3A%2F%2Fwww.takeshape.io%2Farticles%2Fintroducing-twithub%2F%5D(https%3A%2F%2Fwww.takeshape.io%2Farticles%2Fintroducing-twithub%2F)%0A%F0%9F%91%86%F0%9F%91%80%F0%9F%91%86%F0%9F%91%80%F0%9F%91%86%0A%0A---" rel="noopener noreferrer">
+  <a href="https://github.com/takeshape/twithub/issues/new?body=Longform%20article%20up%20on%20building%20TwitHub!%0A%F0%9F%91%87%F0%9F%91%80%F0%9F%91%87%F0%9F%91%80%F0%9F%91%87%0A%5Btakeshape.io%2Farticles%2Fintroducing-twithub%5D(https%3A%2F%2Fwww.takeshape.io%2Farticles%2Fintroducing-twithub%2F)%0A%F0%9F%91%86%F0%9F%91%80%F0%9F%91%86%F0%9F%91%80%F0%9F%91%86%0A%0A---" rel="noopener noreferrer">
     Reply
   </a>
   &nbsp;·&nbsp;
