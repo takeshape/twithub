@@ -3,12 +3,22 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 <title>TakeShape TwitHub Feed</title>
 <link href="https://github.com/takeshape/twithub" />
-<updated>2020-07-28T20:54:25-04:00</updated>
+<updated>2020-09-03T11:19:16-04:00</updated>
 <author>
   <name>TakeShape</name>
 </author>
 <id>https://github.com/takeshape/twithub</id>
 <logo>https://images.takeshape.io/b9b1f9b0-313e-45d7-a92d-42dbbdec5dd0/dev/aa51f61d-0d03-4fa0-8d34-d8a1133356d9/takeshape_logo_lg_black-sq-500.png?auto=compress%2Cformat&w=250</logo>
+<entry>
+  <title>Longform article up on building TwitHub! 👇👀👇👀👇...</title>
+  <link rel="alternate" href="https://github.com/takeshape/twithub/#"/>
+  <id>https://github.com/takeshape/twithub/#</id>
+  <updated>2020-09-03T11:19:16-04:00</updated>
+  <content type="html">&lt;p&gt;Longform article up on building TwitHub!&lt;br /&gt;
+👇👀👇👀👇&lt;br /&gt;
+&lt;a href=&quot;https://www.takeshape.io/articles/introducing-twithub/&quot;&gt;https://www.takeshape.io/articles/introducing-twithub/&lt;/a&gt;&lt;br /&gt;
+👆👀👆👀👆&lt;/p&gt;</content>
+</entry>
 <entry>
   <title>Making creative use of GitHub Actions and TakeShape, an easy-to-use GraphQL...</title>
   <link rel="alternate" href="https://github.com/takeshape/twithub/#"/>
